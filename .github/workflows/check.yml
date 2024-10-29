@@ -1,4 +1,4 @@
-name: Publish to package registries
+name: Check
 
 on:
   push:
