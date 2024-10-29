@@ -24,13 +24,13 @@ const generator = new PhpGenerator({
       property: () => {},
       ctor: (o) => {
         const sorted = Object.entries(o.model.properties).sort((a, b) => {
-          if (a[1].required && !b[1].required) return 1;
-          if (!a[1].required && b[1].required) return -1;
+          if (a[1].required && !b[1].required) return -1;
+          if (!a[1].required && b[1].required) return 1;
           return 0;
         });
         const properties = sorted.map(([_, prop]) => {
           return [
-            `private ${prop.required ? '?' : ''}${prop.property.type}`,
+            `private ${prop.required ? '' : '?'}${prop.property.type}`,
             `${prop.property.options.isNullable ? '|null' : ''} $${prop.propertyName},`
           ].join('');
         }).join('\n  ');
