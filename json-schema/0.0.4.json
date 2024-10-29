@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "CustomerData": {
+      "additionalProperties": false,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "email"
+      ],
+      "type": "object"
+    },
+    "DeleteCustomerPayload": {
+      "additionalProperties": false,
+      "description": "Payload for deleting customers",
+      "properties": {
+        "customer": {
+          "description": "The customer ID",
+          "type": "string"
+        },
+        "salesChannel": {
+          "description": "The sales channel ID",
+          "type": "string"
+        }
+      },
+      "required": [
+        "customer",
+        "salesChannel"
+      ],
+      "type": "object"
+    },
+    "EventChannels": {
+      "enum": [
+        "customer/merge",
+        "customer/delete"
+      ],
+      "type": "string"
+    },
+    "EventsMap": {
+      "additionalProperties": false,
+      "properties": {
+        "DELETE_CUSTOMER": {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": "customer/delete",
+              "type": "string"
+            },
+            "payload": {
+              "additionalProperties": false,
+              "type": "object"
+            }
+          },
+          "required": [
+            "channel",
+            "payload"
+          ],
+          "type": "object"
+        },
+        "MERGE_CUSTOMER": {
+          "additionalProperties": false,
+          "properties": {
+            "channel": {
+              "const": "customer/merge",
+              "type": "string"
+            },
+            "payload": {
+              "additionalProperties": false,
+              "type": "object"
+            }
+          },
+          "required": [
+            "channel",
+            "payload"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "MERGE_CUSTOMER",
+        "DELETE_CUSTOMER"
+      ],
+      "type": "object"
+    },
+    "MergeCustomerPayload": {
+      "additionalProperties": false,
+      "description": "Payload for merging customers",
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/CustomerData"
+        },
+        "newCustomerId": {
+          "description": "The new customer ID",
+          "type": "string"
+        },
+        "oldCustomerId": {
+          "description": "The old customer ID",
+          "type": "string"
+        },
+        "salesChannel": {
+          "description": "The sales channel ID",
+          "type": "string"
+        }
+      },
+      "required": [
+        "oldCustomerId",
+        "newCustomerId",
+        "data"
+      ],
+      "type": "object"
+    }
+  }
+}
