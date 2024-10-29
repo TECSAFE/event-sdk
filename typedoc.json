@@ -1,0 +1,14 @@
+{
+  "navigation": {
+      "includeCategories": true
+  },
+  "defaultCategory": "Types",
+  "categoryOrder": [
+    "Events",
+    "Types",
+    "Helpers"
+  ],
+  "compilerOptions": {
+    "preserveConstEnums": true
+  }
+}

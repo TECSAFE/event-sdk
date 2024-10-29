@@ -1,0 +1,29 @@
+{
+  "name": "@tecsafe/event-sdk",
+  "version": "IN-DEV",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:ts && npm run build:docs && npm run build:schema && npm run build:php",
+    "build:ts": "parcel build",
+    "build:docs": "typedoc --out docs src/index.ts",
+    "build:schema": "ts-json-schema-generator --path 'src/index.ts' --type '*' > dist/schema.json",
+    "build:php": "node scripts/generate-php.mjs",
+    "check": "node scripts/check-channels.js"
+  },
+  "devDependencies": {
+    "@asyncapi/modelina": "^3.7.0",
+    "@parcel/packager-ts": "2.12.0",
+    "@parcel/transformer-typescript-types": "2.12.0",
+    "parcel": "^2.12.0",
+    "ts-json-schema-generator": "^2.3.0",
+    "typedoc": "^0.26.10",
+    "typescript": ">=3.0.0"
+  }
+}
