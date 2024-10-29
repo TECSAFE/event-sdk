@@ -1,17 +1,14 @@
 {
-  "name": "tecsafe/jwt-sdk",
-  "description": "The SDK for token parsing and validation against the JWKS. Also contains the types of token bodies.",
+  "name": "tecsafe/event-sdk",
+  "description": "The Tecsafe Event SDK",
   "type": "library",
   "license": "MIT",
   "require": {
     "ext-json": "*"
   },
-  "scripts": {
-    "test": "@php vendor/bin/phpunit"
-  },
   "autoload": {
     "psr-4": {
-      "Tecsafe\\OFCP\\JWT\\": "src/"
+      "Tecsafe\\OFCP\\Events\\": "src/"
     }
   },
   "minimum-stability": "stable"
