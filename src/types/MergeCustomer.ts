@@ -1,5 +1,3 @@
-import { CustomerData } from "../CustomerData";
-
 /**
  * Payload for merging customers
  */
@@ -15,6 +13,5 @@ export interface MergeCustomerPayload {
   /**
    * The sales channel ID
    */
-  salesChannel?: string,
-  data: CustomerData,
+  salesChannel: string,
 }
