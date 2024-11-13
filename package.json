@@ -6,24 +6,39 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npm run build:ts && npm run build:docs && npm run build:schema && npm run build:php",
+    "build": "npm run build:index && npm run build:ts && npm run build:docs && npm run build:schema && npm run build:php && npm run build:cs-fixer",
+    "build:index": "node scripts/build-index.mjs",
     "build:ts": "parcel build",
-    "build:docs": "typedoc --out docs src/index.ts",
-    "build:schema": "ts-json-schema-generator --path 'src/index.ts' --type '*' > dist/schema.json",
+    "build:docs": "typedoc --highlightLanguages js --highlightLanguages ts --highlightLanguages sh --highlightLanguages typescript --highlightLanguages shell --highlightLanguages php --out docs src/index.ts",
+    "build:schema": "ts-json-schema-generator --path 'src/types/index.ts' --type '*' > dist/schema.json && node scripts/generate-events-map.mjs",
     "build:php": "node scripts/generate-php.mjs",
-    "check": "node scripts/check-channels.js"
+    "build:cs-fixer": "docker run -it --rm -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3} fix php",
+    "check": "node scripts/check-names.js"
   },
   "devDependencies": {
-    "@asyncapi/modelina": "^3.7.0",
-    "@parcel/packager-ts": "2.12.0",
-    "@parcel/transformer-typescript-types": "2.12.0",
-    "parcel": "^2.12.0",
+    "@asyncapi/modelina": "^3.8.0",
+    "@parcel/packager-ts": "2.13.0",
+    "@parcel/transformer-typescript-types": "2.13.0",
+    "@types/amqplib": "^0.10.5",
+    "@types/node": "^22.9.0",
+    "parcel": "2.13.0",
     "ts-json-schema-generator": "^2.3.0",
-    "typedoc": "^0.26.10",
-    "typescript": ">=3.0.0"
+    "typedoc": "^0.26.11",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "amqp-connection-manager": "^4.1.14",
+    "amqplib": "^0.10.4"
   }
 }

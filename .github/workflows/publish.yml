@@ -71,8 +71,8 @@ jobs:
           git config --global user.name "CI Bot"
           git clone git@github.com:TECSAFE/event-sdk-php.git
           rm -rf event-sdk-php/*
-          mv php event-sdk-php/src
-          cp LICENSE composer.json event-sdk-php/
+          mv php event-sdk-php/php
+          cp LICENSE composer.json composer.lock event-sdk-php/
           echo "WARNING: This repository is automatically generated from the event-sdk repository." > event-sdk-php/README.md
           echo "Do not edit files in this repository directly." >> event-sdk-php/README.md
           echo "" >> event-sdk-php/README.md
