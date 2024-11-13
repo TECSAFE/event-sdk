@@ -23,7 +23,7 @@
     "build:docs": "typedoc --highlightLanguages js --highlightLanguages ts --highlightLanguages sh --highlightLanguages typescript --highlightLanguages shell --highlightLanguages php --out docs src/index.ts",
     "build:schema": "ts-json-schema-generator --path 'src/types/index.ts' --type '*' > dist/schema.json && node scripts/generate-events-map.mjs",
     "build:php": "node scripts/generate-php.mjs",
-    "build:cs-fixer": "docker run -it --rm -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3} fix php",
+    "build:cs-fixer": "docker run --rm -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3} fix php",
     "check": "node scripts/check-names.js"
   },
   "devDependencies": {
