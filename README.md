@@ -24,6 +24,8 @@ curl -O https://tecsafe.github.io/event-sdk/json-schema/latest.json
 
 ## Usage
 
+Visit [https://tecsafe.github.io/event-sdk/](https://tecsafe.github.io/event-sdk/) for a more detailed documentation.
+
 ### Typescript / Sending
 
 ```typescript
@@ -62,7 +64,61 @@ import { MqService, MqError } from '@tecsafe/event-sdk';
 })().then();
 ```
 
-Visit [https://tecsafe.github.io/event-sdk/](https://tecsafe.github.io/event-sdk/) for a more detailed documentation.
+### NestJS
+
+```typescript
+// app.module.ts
+import { Logger, Module } from '@nestjs/common';
+import { NestJsEventModule } from '@tecsafe/event-sdk/adapter/nestjs/dist/index';
+
+@Module({
+  imports: [
+    NestJsEventModule.forRoot(
+      'amqp://localhost',
+      'test',
+      'general',
+      true,
+      new Logger('MqService')
+    ),
+  ],
+  providers: [],
+})
+export class AppModule {}
+```
+
+```typescript
+// app.service.ts
+import { Injectable } from '@nestjs/common';
+import { MergeCustomerPayload, MqService } from '@tecsafe/event-sdk';
+
+@Injectable()
+export class AppService {
+  constructor(private readonly mqService: MqService) {
+    mqService.subscribe('CUSTOMER_MERGE', this.handleCustomerMerge.bind(this));
+  }
+
+  async handleCustomerMerge(payload: MergeCustomerPayload) {
+    console.log('Received CUSTOMER_MERGE event', payload);
+  }
+
+  async sendCustomerMergeEvent() {
+    await this.mqService.publish('CUSTOMER_MERGE', {
+      newCustomerId: '123',
+      oldCustomerId: '456',
+      salesChannel: '789',
+      test: { foo: 'bar' },
+    });
+  }
+
+  async sendCustomerDeleteEvent() {
+    await this.mqService.publish('CUSTOMER_DELETE', {
+      customer: '123',
+      salesChannel: '789',
+    });
+  }
+}
+
+```
 
 ### PHP / Sending
 

@@ -2,11 +2,17 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "files.insertFinalNewline": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always",
+    "editor.action.formatDocument": "always"
+  },
   "files.exclude": {
   },
   "cSpell.words": [
     "asyncapi",
     "modelina",
+    "nestjs",
     "OFCP",
     "Tecsafe"
   ],

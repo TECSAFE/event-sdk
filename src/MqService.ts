@@ -12,6 +12,8 @@ export class MqService {
   private connection: AmqpConnectionManager | null = null;
   private channelWrapper: ChannelWrapper;
   private eventHandlers: Map<string, MqHandler<any>> = new Map();
+  private consuming = false;
+  private unregisteredHandlers = new Set<string>();
 
   /**
    * Create a new MqService instance.
@@ -25,7 +27,7 @@ export class MqService {
     readonly connectionString: string = 'amqp://localhost',
     private readonly queueName: string|null = null,
     readonly exchange: string = 'general',
-    private readonly requeueUnhandled: boolean = true,
+    private readonly requeueUnhandled: boolean = false,
     readonly logger: {
       log: (message: string) => void;
       error: (message: string, error: any) => void;
@@ -74,6 +76,10 @@ export class MqService {
     }
   }
 
+  getListenerCount(): number {
+    return this.eventHandlers.size;
+  }
+
   async subscribe<TChannel extends keyof EventsMap>(
     event: TChannel,
     handler: MqHandler<TChannel>,
@@ -89,7 +95,10 @@ export class MqService {
       const eventName = headers.event_name;
 
       if (!eventName || !this.eventHandlers.has(eventName)) {
-        this.logger.log('No handler found for event ' + eventName);
+        if (!this.unregisteredHandlers.has(eventName)) {
+          this.unregisteredHandlers.add(eventName);
+          this.logger.warn(`No handler found for event ${eventName}`);
+        }
         this.channelWrapper.nack(message, false, this.requeueUnhandled);
         return;
       }
@@ -118,6 +127,7 @@ export class MqService {
   }
 
   async startConsuming(): Promise<void> {
+    if (this.consuming) return;
     if (!this.connection) throw new Error('Connection closed');
     if (!this.queueName) throw new Error('Queue name not set');
     if (this.eventHandlers.size === 0) throw new Error('No event handlers registered');
@@ -151,5 +161,8 @@ export class MqService {
     await this.channelWrapper.close();
     await this.connection.close();
     this.connection = null;
+    this.consuming = false;
+    this.eventHandlers.clear();
+    this.unregisteredHandlers.clear();
   }
 }

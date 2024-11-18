@@ -36,7 +36,7 @@ class MqServiceBase
         private readonly string $user = 'guest',
         private readonly string $password = 'guest',
         private readonly string|null $queueName = null,
-        private readonly bool $requeueUnhandled = true,
+        private readonly bool $requeueUnhandled = false,
         private readonly string $vhost = '/',
         private readonly string $exchange = 'general',
     ) {
@@ -220,7 +220,7 @@ class MqServiceBase
             // Check if we have a handler for this event
             if ($eventName === null || !isset($this->eventHandlers[$eventName])) {
                 // No handler found, reject and requeue the message
-                $message->reject(true);
+                $message->reject($this->requeueUnhandled);
                 return;
             }
 
