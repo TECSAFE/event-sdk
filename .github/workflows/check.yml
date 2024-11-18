@@ -25,7 +25,7 @@ jobs:
       
       # Install dependencies
       - name: Install dependencies with pnpm
-        run: pnpm install
+        run: pnpm install && cd adapter/nestjs && pnpm install
       
       # Build and generate code
       - name: Build
