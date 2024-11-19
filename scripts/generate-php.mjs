@@ -108,9 +108,11 @@ export async function generate() {
   const typeMap = Object.entries(schema.definitions.EventsMap.properties).reduce((acc, [key, val]) => {
     acc[key] = val.const;
     return acc;
-  }, {});
+  }, {})
 
-  for (const val of Object.values(typeMap)) {
+  const deDupedValues = [...new Set(Object.values(typeMap))];
+
+  for (const val of deDupedValues) {
     const listenerPhp = `<?php
 declare(strict_types=1);
 
@@ -136,8 +138,8 @@ declare(strict_types=1);
 
 namespace Tecsafe\\OFCP\\Events;
 
-${Object.values(typeMap).map((f) => `use Tecsafe\\OFCP\\Events\\Models\\${f};`).join('\n')}
-${Object.values(typeMap).map((f) => `use Tecsafe\\OFCP\\Events\\Listeners\\${f}Listener;`).join('\n')}
+${deDupedValues.map((f) => `use Tecsafe\\OFCP\\Events\\Models\\${f};`).join('\n')}
+${deDupedValues.map((f) => `use Tecsafe\\OFCP\\Events\\Listeners\\${f}Listener;`).join('\n')}
 use Tecsafe\\OFCP\\Events\\MqServiceBase;
 
 class MqService extends MqServiceBase

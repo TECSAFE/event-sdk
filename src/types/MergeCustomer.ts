@@ -1,5 +1,3 @@
-import { TestType } from "./TestType";
-
 /**
  * Payload for merging customers
  */
@@ -16,5 +14,4 @@ export interface MergeCustomerPayload {
    * The sales channel ID
    */
   salesChannel: string,
-  test: TestType,
 }

@@ -1,7 +1,7 @@
 /**
  * Payload for deleting customers
  */
-export interface DeleteCustomerPayload {
+export interface BasicCustomerEventPayload {
   /**
    * The customer ID
    */
