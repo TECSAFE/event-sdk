@@ -1,6 +1,6 @@
 {
   "name": "@tecsafe/event-sdk",
-  "version": "0.0.0",
+  "version": "IN-DEV",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
