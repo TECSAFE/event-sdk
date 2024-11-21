@@ -30,7 +30,7 @@
     "build:php": "npm run build:php:generate && npm run build:php:fix && npm run build:php:docs",
     "build:php:generate": "node scripts/generate-php.mjs",
     "build:php:fix": "docker run --rm -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3} fix php",
-    "build:php:docs": "cd php && docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3",
+    "build:php:docs": "cd php && docker run --rm --user $(id -u):$(id -g) -v ${PWD}:/data phpdoc/phpdoc:3",
     "check": "node scripts/check-names.js"
   },
   "devDependencies": {
