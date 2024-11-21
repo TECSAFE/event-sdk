@@ -33,7 +33,7 @@ jobs:
       
       # Documentation Sync
       - name: Move phpdoc into docs folder
-        run: mv php/.phpdoc docs/php
+        run: mv php/.phpdoc/build docs/php
       - name: Publish Documentation
         uses: JamesIves/github-pages-deploy-action@v4
         with:
