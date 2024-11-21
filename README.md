@@ -24,7 +24,11 @@ curl -O https://tecsafe.github.io/event-sdk/json-schema/latest.json
 
 ## Usage
 
-Visit [https://tecsafe.github.io/event-sdk/](https://tecsafe.github.io/event-sdk/) for a more detailed documentation.
+Visit [https://tecsafe.github.io/event-sdk/](https://tecsafe.github.io/event-sdk/)
+for a more detailed documentation.
+
+There is also an php version of the documentation available at
+[https://tecsafe.github.io/event-sdk/php](https://tecsafe.github.io/event-sdk/php).
 
 ### Typescript / Sending
 

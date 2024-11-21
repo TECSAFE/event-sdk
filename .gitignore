@@ -9,3 +9,4 @@ vendor/
 src/index.ts
 src/types/index.ts
 .php-cs-fixer.cache
+php/.phpdoc/

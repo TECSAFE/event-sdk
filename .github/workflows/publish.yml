@@ -32,6 +32,8 @@ jobs:
         run: pnpm check
       
       # Documentation Sync
+      - name: Move phpdoc into docs folder
+        run: mv php/.phpdoc docs/php
       - name: Publish Documentation
         uses: JamesIves/github-pages-deploy-action@v4
         with:
@@ -79,7 +81,6 @@ jobs:
           cat README.md >> event-sdk-php/README.md
           cd event-sdk-php
           git add .
-          git commit -m "Update to version $(echo $GITHUB_REF | sed 's/refs\/tags\///')"
-          git push
+          git commit -m "Update to version $(echo $GITHUB_REF | sed 's/refs\/tags\///')" && git push origin main || echo "No changes to commit"
           git tag $(echo $GITHUB_REF | sed 's/refs\/tags\///')
           git push origin --tags
