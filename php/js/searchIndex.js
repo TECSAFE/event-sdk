@@ -11,6 +11,16 @@ Search.appendIndex(
             "summary": "Handle\u0020the\u0020BasicCustomerEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
             "url": "classes/Tecsafe-OFCP-Events-Listeners-BasicCustomerEventPayloadListener.html#method_on_event"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\GenericEmailEventPayloadListener",
+            "name": "GenericEmailEventPayloadListener",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-GenericEmailEventPayloadListener.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\GenericEmailEventPayloadListener\u003A\u003Aon_event\u0028\u0029",
+            "name": "on_event",
+            "summary": "Handle\u0020the\u0020GenericEmailEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-GenericEmailEventPayloadListener.html#method_on_event"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\MergeCustomerPayloadListener",
             "name": "MergeCustomerPayloadListener",
             "summary": "",
@@ -70,6 +80,71 @@ Search.appendIndex(
             "name": "salesChannel",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-BasicCustomerEventPayload.html#property_salesChannel"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload",
+            "name": "GenericEmailEventPayload",
+            "summary": "Payload\u0020for\u0020deleting\u0020customers",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Payload\u0020for\u0020deleting\u0020customers",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetEmail\u0028\u0029",
+            "name": "getEmail",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getEmail"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetEmail\u0028\u0029",
+            "name": "setEmail",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setEmail"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetSubject\u0028\u0029",
+            "name": "getSubject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getSubject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetSubject\u0028\u0029",
+            "name": "setSubject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setSubject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetText\u0028\u0029",
+            "name": "getText",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getText"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetText\u0028\u0029",
+            "name": "setText",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setText"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024email",
+            "name": "email",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_email"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024subject",
+            "name": "subject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_subject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024text",
+            "name": "text",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_text"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload",
             "name": "MergeCustomerPayload",
@@ -215,6 +290,16 @@ Search.appendIndex(
             "name": "subscribe_customer_created",
             "summary": "Subscribe\u0020to\u0020the\u0020customer.created\u0020event.",
             "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_created"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService\u003A\u003Asend_email_generic\u0028\u0029",
+            "name": "send_email_generic",
+            "summary": "Send\u0020the\u0020email.generic\u0020event.",
+            "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_send_email_generic"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService\u003A\u003Asubscribe_email_generic\u0028\u0029",
+            "name": "subscribe_email_generic",
+            "summary": "Subscribe\u0020to\u0020the\u0020email.generic\u0020event.",
+            "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_email_generic"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase",
             "name": "MqServiceBase",
