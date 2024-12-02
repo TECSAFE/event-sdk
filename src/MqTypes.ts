@@ -22,3 +22,19 @@ export class MqError {
    */
   constructor(public readonly requeue: boolean) {}
 }
+
+/**
+ * Create a new message queue listener.
+ * This function does only return the handler passed to it, it does not actually listen to any events.
+ * It only provides type safety for the handler.
+ * @category Service
+ * @param _event The channel to listen to.
+ * @param handler The event handler.
+ * @returns The event handler.
+ */
+export function createMqListener<TChannel extends keyof EventsMap>(
+  _event: TChannel,
+  handler: MqHandler<TChannel>
+): MqHandler<TChannel> {
+  return handler;
+}

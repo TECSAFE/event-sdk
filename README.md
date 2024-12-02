@@ -78,10 +78,10 @@ import { NestJsEventModule } from '@tecsafe/event-sdk/adapter/nestjs/dist/index'
 @Module({
   imports: [
     NestJsEventModule.forRoot(
-      'amqp://localhost',
-      'test',
-      'general',
-      true,
+      'amqp://localhost', // connection string
+      'test', // queue name (normally the service name)
+      'general', // exchange name
+      true, // requeue unhandled messages
       new Logger('MqService')
     ),
   ],
@@ -92,18 +92,20 @@ export class AppModule {}
 
 ```typescript
 // app.service.ts
-import { Injectable } from '@nestjs/common';
-import { MergeCustomerPayload, MqService } from '@tecsafe/event-sdk';
+import { Injectable, OnModuleInit } from '@nestjs/common';
+import { MqService, createMqListener } from '@tecsafe/event-sdk';
 
 @Injectable()
-export class AppService {
-  constructor(private readonly mqService: MqService) {
-    mqService.subscribe('CUSTOMER_MERGE', this.handleCustomerMerge.bind(this));
+export class AppService implements onModuleInit {
+  constructor(private readonly mqService: MqService) {}
+
+  onModuleInit() {
+    this.mqService.subscribe('CUSTOMER_MERGE', this.handleCustomerMerge.bind(this));
   }
 
-  async handleCustomerMerge(payload: MergeCustomerPayload) {
+  readonly handleCustomerMerge = createMqListener('CUSTOMER_MERGE', (payload) => {
     console.log('Received CUSTOMER_MERGE event', payload);
-  }
+  });
 
   async sendCustomerMergeEvent() {
     await this.mqService.publish('CUSTOMER_MERGE', {
@@ -121,7 +123,6 @@ export class AppService {
     });
   }
 }
-
 ```
 
 ### PHP / Sending
