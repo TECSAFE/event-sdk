@@ -96,6 +96,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_setNewCustomerId"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AgetNewExternalCustomerId\u0028\u0029",
+            "name": "getNewExternalCustomerId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_getNewExternalCustomerId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AsetNewExternalCustomerId\u0028\u0029",
+            "name": "setNewExternalCustomerId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_setNewExternalCustomerId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AgetNewSalesChannelId\u0028\u0029",
+            "name": "getNewSalesChannelId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_getNewSalesChannelId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AsetNewSalesChannelId\u0028\u0029",
+            "name": "setNewSalesChannelId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_setNewSalesChannelId"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AgetOldCustomerId\u0028\u0029",
             "name": "getOldCustomerId",
             "summary": "",
@@ -106,15 +126,25 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_setOldCustomerId"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AgetSalesChannel\u0028\u0029",
-            "name": "getSalesChannel",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AgetOldExternalCustomerId\u0028\u0029",
+            "name": "getOldExternalCustomerId",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_getSalesChannel"
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_getOldExternalCustomerId"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AsetSalesChannel\u0028\u0029",
-            "name": "setSalesChannel",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AsetOldExternalCustomerId\u0028\u0029",
+            "name": "setOldExternalCustomerId",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_setSalesChannel"
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_setOldExternalCustomerId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AgetOldSalesChannelId\u0028\u0029",
+            "name": "getOldSalesChannelId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_getOldSalesChannelId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AsetOldSalesChannelId\u0028\u0029",
+            "name": "setOldSalesChannelId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#method_setOldSalesChannelId"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003AjsonSerialize\u0028\u0029",
             "name": "jsonSerialize",
@@ -126,15 +156,30 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_newCustomerId"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003A\u0024newExternalCustomerId",
+            "name": "newExternalCustomerId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_newExternalCustomerId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003A\u0024newSalesChannelId",
+            "name": "newSalesChannelId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_newSalesChannelId"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003A\u0024oldCustomerId",
             "name": "oldCustomerId",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_oldCustomerId"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003A\u0024salesChannel",
-            "name": "salesChannel",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003A\u0024oldExternalCustomerId",
+            "name": "oldExternalCustomerId",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_salesChannel"
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_oldExternalCustomerId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload\u003A\u003A\u0024oldSalesChannelId",
+            "name": "oldSalesChannelId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_oldSalesChannelId"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService",
             "name": "MqService",
