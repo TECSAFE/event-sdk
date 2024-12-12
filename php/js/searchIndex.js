@@ -11,6 +11,16 @@ Search.appendIndex(
             "summary": "Handle\u0020the\u0020BasicCustomerEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
             "url": "classes/Tecsafe-OFCP-Events-Listeners-BasicCustomerEventPayloadListener.html#method_on_event"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\ButtonEmailEventPayloadListener",
+            "name": "ButtonEmailEventPayloadListener",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-ButtonEmailEventPayloadListener.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\ButtonEmailEventPayloadListener\u003A\u003Aon_event\u0028\u0029",
+            "name": "on_event",
+            "summary": "Handle\u0020the\u0020ButtonEmailEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-ButtonEmailEventPayloadListener.html#method_on_event"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\GenericEmailEventPayloadListener",
             "name": "GenericEmailEventPayloadListener",
             "summary": "",
@@ -81,14 +91,264 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-BasicCustomerEventPayload.html#property_salesChannel"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body",
+            "name": "Body",
+            "summary": "Email\u0020body\u0020attributs\u0020text\u003A\u0020Email\u0020text\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020text\u0020\u007D\u007D\u0020without\u0020html\u0020tags\u0020Links\u0020are\u0020parsed\u0020to\u0020anchor\u0020tags\u0020title\u003A\u0020Email\u0020title\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020title\u0020\u007D\u007D\u0020not\u0020the\u0020subject",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Email\u0020body\u0020attributs\u0020text\u003A\u0020Email\u0020text\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020text\u0020\u007D\u007D\u0020without\u0020html\u0020tags\u0020Links\u0020are\u0020parsed\u0020to\u0020anchor\u0020tags\u0020title\u003A\u0020Email\u0020title\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020title\u0020\u007D\u007D\u0020not\u0020the\u0020subject",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AgetText\u0028\u0029",
+            "name": "getText",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_getText"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AsetText\u0028\u0029",
+            "name": "setText",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_setText"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AgetTitle\u0028\u0029",
+            "name": "getTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_getTitle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AsetTitle\u0028\u0029",
+            "name": "setTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_setTitle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003A\u0024text",
+            "name": "text",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#property_text"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#property_title"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData",
+            "name": "BodyData",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "This\u0020class\u0020represents\u0020the\u0020undefined\u0020model.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003AgetPrimatyButton\u0028\u0029",
+            "name": "getPrimatyButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#method_getPrimatyButton"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003AsetPrimatyButton\u0028\u0029",
+            "name": "setPrimatyButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#method_setPrimatyButton"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003AgetSecondaryButton\u0028\u0029",
+            "name": "getSecondaryButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#method_getSecondaryButton"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003AsetSecondaryButton\u0028\u0029",
+            "name": "setSecondaryButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#method_setSecondaryButton"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003A\u0024primatyButton",
+            "name": "primatyButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#property_primatyButton"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyData\u003A\u003A\u0024secondaryButton",
+            "name": "secondaryButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyData.html#property_secondaryButton"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton",
+            "name": "BodyDataPrimatyButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "This\u0020class\u0020represents\u0020the\u0020undefined\u0020model.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003AgetTitle\u0028\u0029",
+            "name": "getTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#method_getTitle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003AsetTitle\u0028\u0029",
+            "name": "setTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#method_setTitle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003AgetUrl\u0028\u0029",
+            "name": "getUrl",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#method_getUrl"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003AsetUrl\u0028\u0029",
+            "name": "setUrl",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#method_setUrl"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#property_title"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataPrimatyButton\u003A\u003A\u0024url",
+            "name": "url",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataPrimatyButton.html#property_url"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton",
+            "name": "BodyDataSecondaryButton",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "This\u0020class\u0020represents\u0020the\u0020undefined\u0020model.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003AgetTitle\u0028\u0029",
+            "name": "getTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#method_getTitle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003AsetTitle\u0028\u0029",
+            "name": "setTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#method_setTitle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003AgetUrl\u0028\u0029",
+            "name": "getUrl",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#method_getUrl"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003AsetUrl\u0028\u0029",
+            "name": "setUrl",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#method_setUrl"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#property_title"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BodyDataSecondaryButton\u003A\u003A\u0024url",
+            "name": "url",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-BodyDataSecondaryButton.html#property_url"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload",
+            "name": "ButtonEmailEventPayload",
+            "summary": "Payload\u0020for\u0020sending\u0020emails\u0020with\u0020one\u0020to\u0020two\u0020buttons",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Payload\u0020for\u0020sending\u0020emails\u0020with\u0020one\u0020to\u0020two\u0020buttons",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003AgetBody\u0028\u0029",
+            "name": "getBody",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#method_getBody"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003AsetBody\u0028\u0029",
+            "name": "setBody",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#method_setBody"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003AgetHeader\u0028\u0029",
+            "name": "getHeader",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#method_getHeader"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003AsetHeader\u0028\u0029",
+            "name": "setHeader",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#method_setHeader"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003A\u0024body",
+            "name": "body",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#property_body"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\ButtonEmailEventPayload\u003A\u003A\u0024header",
+            "name": "header",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#property_header"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload",
             "name": "GenericEmailEventPayload",
-            "summary": "Payload\u0020for\u0020deleting\u0020customers",
+            "summary": "Payload\u0020for\u0020sending\u0020generic\u0020emails",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Payload\u0020for\u0020deleting\u0020customers",
+            "summary": "Payload\u0020for\u0020sending\u0020generic\u0020emails",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method___construct"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003Afrom_json\u0028\u0029",
@@ -96,55 +356,165 @@ Search.appendIndex(
             "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_from_json"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetEmail\u0028\u0029",
-            "name": "getEmail",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetBody\u0028\u0029",
+            "name": "getBody",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getEmail"
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getBody"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetEmail\u0028\u0029",
-            "name": "setEmail",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetBody\u0028\u0029",
+            "name": "setBody",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setEmail"
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setBody"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetSubject\u0028\u0029",
-            "name": "getSubject",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetHeader\u0028\u0029",
+            "name": "getHeader",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getSubject"
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getHeader"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetSubject\u0028\u0029",
-            "name": "setSubject",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetHeader\u0028\u0029",
+            "name": "setHeader",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setSubject"
-        },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetText\u0028\u0029",
-            "name": "getText",
-            "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getText"
-        },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetText\u0028\u0029",
-            "name": "setText",
-            "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setText"
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setHeader"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AjsonSerialize\u0028\u0029",
             "name": "jsonSerialize",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_jsonSerialize"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024email",
-            "name": "email",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024body",
+            "name": "body",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_email"
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_body"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024subject",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024header",
+            "name": "header",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_header"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header",
+            "name": "Header",
+            "summary": "Email\u0020header\u0020attreibutes\u0020to,\u0020from,\u0020cc,\u0020bcc,\u0020subject,\u0020are\u0020Required\u0020and\u0020are\u0020self\u0020explaining\u0020replyTo\u003A\u0020Optional\u0020the\u0020recipient\u0020of\u0020the\u0020reply\u0020returnPath\u0020\u003A\u0020Optional\u0020return\u0020path\u0020address\u0020of\u0020the\u0020email",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Email\u0020header\u0020attreibutes\u0020to,\u0020from,\u0020cc,\u0020bcc,\u0020subject,\u0020are\u0020Required\u0020and\u0020are\u0020self\u0020explaining\u0020replyTo\u003A\u0020Optional\u0020the\u0020recipient\u0020of\u0020the\u0020reply\u0020returnPath\u0020\u003A\u0020Optional\u0020return\u0020path\u0020address\u0020of\u0020the\u0020email",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AgetBcc\u0028\u0029",
+            "name": "getBcc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_getBcc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AsetBcc\u0028\u0029",
+            "name": "setBcc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_setBcc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AgetCc\u0028\u0029",
+            "name": "getCc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_getCc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AsetCc\u0028\u0029",
+            "name": "setCc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_setCc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AgetReservedFrom\u0028\u0029",
+            "name": "getReservedFrom",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_getReservedFrom"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AsetReservedFrom\u0028\u0029",
+            "name": "setReservedFrom",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_setReservedFrom"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AgetReplyTo\u0028\u0029",
+            "name": "getReplyTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_getReplyTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AsetReplyTo\u0028\u0029",
+            "name": "setReplyTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_setReplyTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AgetReturnPath\u0028\u0029",
+            "name": "getReturnPath",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_getReturnPath"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AsetReturnPath\u0028\u0029",
+            "name": "setReturnPath",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_setReturnPath"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AgetSubject\u0028\u0029",
+            "name": "getSubject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_getSubject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AsetSubject\u0028\u0029",
+            "name": "setSubject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_setSubject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AgetTo\u0028\u0029",
+            "name": "getTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_getTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AsetTo\u0028\u0029",
+            "name": "setTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_setTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A\u0024reservedFrom",
+            "name": "reservedFrom",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#property_reservedFrom"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A\u0024subject",
             "name": "subject",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_subject"
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#property_subject"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024text",
-            "name": "text",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A\u0024to",
+            "name": "to",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_text"
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#property_to"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A\u0024bcc",
+            "name": "bcc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#property_bcc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A\u0024cc",
+            "name": "cc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#property_cc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A\u0024replyTo",
+            "name": "replyTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#property_replyTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header\u003A\u003A\u0024returnPath",
+            "name": "returnPath",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Header.html#property_returnPath"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\MergeCustomerPayload",
             "name": "MergeCustomerPayload",
@@ -300,6 +670,16 @@ Search.appendIndex(
             "name": "subscribe_email_generic",
             "summary": "Subscribe\u0020to\u0020the\u0020email.generic\u0020event.",
             "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_email_generic"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService\u003A\u003Asend_email_button\u0028\u0029",
+            "name": "send_email_button",
+            "summary": "Send\u0020the\u0020email.button\u0020event.",
+            "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_send_email_button"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService\u003A\u003Asubscribe_email_button\u0028\u0029",
+            "name": "subscribe_email_button",
+            "summary": "Subscribe\u0020to\u0020the\u0020email.button\u0020event.",
+            "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_email_button"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase",
             "name": "MqServiceBase",
