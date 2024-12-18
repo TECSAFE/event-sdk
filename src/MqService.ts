@@ -34,6 +34,7 @@ export class MqService {
       warn: (message: string) => void;
     } = console,
   ) {
+    if (connectionString.trim() === '') throw new Error("Connection string cant be empty");
     this.connection = amqp.connect([connectionString]);
     this.channelWrapper = this.connection.createChannel({
       setup: (channel: Channel) => {
