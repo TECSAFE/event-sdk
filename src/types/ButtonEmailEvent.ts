@@ -10,7 +10,7 @@ export interface ButtonEmailEventPayload {
      */
     header: {
         to: string[]
-        from: string[]
+        from: string
         cc?: string[]
         bcc?: string[]
         subject: string
