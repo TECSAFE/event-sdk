@@ -1,0 +1,24 @@
+{
+    "name": "tecsafe/event-sdk-parser",
+    "type": "library",
+    "require": {
+        "nikic/php-parser": "^5.4",
+        "symfony/finder": "7.3.x-dev"
+    },
+    "authors": [
+        {
+            "name": "Chinthujan Sehasothy",
+            "email": "chinthu@madco.de"
+        }
+    ],
+    "minimum-stability": "dev",
+    "scripts": {
+        "parse": [
+            "@php parse.php"
+        ],
+        "install-parse": [
+            "@composer install",
+            "@parse"
+        ]
+    }
+}
