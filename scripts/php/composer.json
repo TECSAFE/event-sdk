@@ -13,11 +13,19 @@
     ],
     "minimum-stability": "dev",
     "scripts": {
+        "map:events": [
+            "@install",
+            "@php eventmap.php"
+        ],
         "parse": [
+            "@install",
             "@php parse.php"
         ],
-        "install-parse": [
-            "@composer install",
+        "install": [
+            "@composer install"
+        ],
+        "build": [
+            "@map:events",
             "@parse"
         ]
     }
