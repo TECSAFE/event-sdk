@@ -1,4 +1,4 @@
-This script reads all PHP DTOs from php/Models and parses them to perform necessary transformations for php.
+These scripts read all PHP DTOs from php/Models and parses them to perform necessary transformations for php.
 
 ## Used packages
 
@@ -7,8 +7,9 @@ This script reads all PHP DTOs from php/Models and parses them to perform necess
 
 
 ## Usage
-    $ composer --working-dir ./scripts/php/ install
-    $ composer --working-dir ./scripts/php/ parse
+    $ composer --working-dir ./scripts/php/ install 
+    $ composer --working-dir ./scripts/php/ parse     # generates DTOs
+    $ composer --working-dir ./scripts/php/ map:events     # generates EventMap with current events
 
     $ pnpm build:php:parse
 

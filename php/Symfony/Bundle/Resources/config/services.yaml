@@ -1,0 +1,15 @@
+parameters:
+  env(MESSENGER_TRANSPORT_OFCP_DSN): ~
+  env(MESSENGER_TRANSPORT_OFCP_EXCHANGE_NAME): ~
+  env(MESSENGER_TRANSPORT_OFCP_EXCHANGE_TYPE): ~
+  env(MESSENGER_TRANSPORT_OFCP_QUEUE_NAME): ~
+
+services:
+  ofcp_events.messenger.serializer:
+    class:  Tecsafe\OFCP\Events\Symfony\Bundle\Messenger\Serializer
+    arguments:
+      - "@logger"
+
+  ofcp_events.messenger.middleware.event_name:
+    class: Tecsafe\OFCP\Events\Symfony\Bundle\Messenger\EventNameMiddleware
+

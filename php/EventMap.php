@@ -1,6 +1,7 @@
 <?php
 
 declare (strict_types=1);
+
 namespace Tecsafe\OFCP\Events;
 
 /**
@@ -24,7 +25,8 @@ namespace Tecsafe\OFCP\Events;
  */
 final class EventMap
 {
-    public const EVENTS = [['name' => 'customer.merge', 'type' => 'MergeCustomerPayload'], ['name' => 'customer.delete', 'type' => 'CustomerDeleteEventPayload'], ['name' => 'customer.created', 'type' => 'CustomerCreatedEventPayload'], ['name' => 'email.generic', 'type' => 'GenericEmailEventPayload'], ['name' => 'email.button', 'type' => 'ButtonEmailEventPayload']];
+    public const EVENTS = [];
+
     public static function getTypeName(string $eventName, bool $fqdn = true): string
     {
         $typeName = null;
@@ -47,6 +49,7 @@ final class EventMap
             return $typeName;
         }
     }
+
     public static function getEventName(string $typeName): string
     {
         foreach (self::EVENTS as $event) {

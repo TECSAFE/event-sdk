@@ -181,6 +181,106 @@ $service->subscribe_customer_merge(function (MergeCustomerPayload $payload) {
 $service->startConsuming();
 ```
 
+
+## Symfony Bundle
+
+This SDK comes with a symfony bundle, that integrates into symfony messenger.
+For this purpose the bundle creates a new MessageBus-instance named `ofcp_events`.
+You have to use this new bus and dispatch a message with a special stamp called `EventNameStamp`.
+A custom messenger-middleware and serializer are responsible for hiding implementation details.
+
+### Install
+
+1. Register the bundle
+
+    ```php
+    #   config/bundles.php 
+    
+    return [
+        // ... other bundles
+        Tecsafe\OFCP\Events\Symfony\Bundle\TecsafeOfcpEventsBundle::class => ['all' => true],
+    ]
+
+    ```
+   
+2. Configure bundle with env vars
+
+    ```dotenv
+    MESSENGER_TRANSPORT_OFCP_DSN=amqp://rabbitmq:rabbitmq@rabbitmq:5672/%2f/ofcp
+    MESSENGER_TRANSPORT_OFCP_EXCHANGE_NAME=your-own-exchange
+    MESSENGER_TRANSPORT_OFCP_EXCHANGE_TYPE=topic
+    MESSENGER_TRANSPORT_OFCP_QUEUE_NAME=your-own-queue
+    ```
+
+
+### Usage
+
+#### Dispatch message to ofcp event bus
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App;
+
+use Symfony\Component\Messenger\MessageBusInterface;
+use Tecsafe\OFCP\Events\Models\CustomerCreatedEventPayload;
+use Tecsafe\OFCP\Events\Symfony\Bundle\Messenger\EventNameStamp;
+use Tecsafe\OFCP\Events\EventMap;
+
+class YourService 
+{
+    public function __construct(
+        /**
+         * With autowiring, symfony will provide the ofcp_events-bus with this variable name.
+         * Otherwise inject it manually.
+         */
+        private MessageBusInterface $ofcpEvents,
+    ) {
+        parent::__construct();
+    }
+
+    public function yourMethod()
+    {
+        $this->ofcpEvents->dispatch(new CustomerCreatedEventPayload('foo', 'bar'), [
+            new EventNameStamp(EventMap::CUSTOMER_CREATED['name'])
+        ]);
+    }
+}
+```
+
+#### Handle message from ofcp event bus
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Messenger\MessageHandler;
+
+use Symfony\Component\Messenger\Attribute\AsMessageHandler;
+use Tecsafe\OFCP\Events\Models\CustomerCreatedEventPayload;
+use Tecsafe\OFCP\Events\Symfony\Bundle\Messenger\Constants;
+
+#[AsMessageHandler(
+    bus: Constants::MESSENGER_OFCP_EVENTS_BUS_NAME,
+)]
+class CustomerCreatedHandler
+{
+    public function __invoke(CustomerCreatedEventPayload $payload): void
+    {
+        // Your own logic
+    }
+}
+```
+
+#### Run worker
+
+```shell
+$ bin/console messenger:consume ofcp_events
+```
+
 ### **JsonSchema**
 
 See [https://json-schema.org/](https://json-schema.org/) for more information on how to use JsonSchema.
