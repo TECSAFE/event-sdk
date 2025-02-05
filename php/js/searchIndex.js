@@ -1,15 +1,50 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\BasicCustomerEventPayloadListener",
-            "name": "BasicCustomerEventPayloadListener",
-            "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Listeners-BasicCustomerEventPayloadListener.html"
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap",
+            "name": "EventMap",
+            "summary": "The\u0020events\u0020constant\u0020must\u0020have\u0020the\u0020following\u0020structure\u003A",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\BasicCustomerEventPayloadListener\u003A\u003Aon_event\u0028\u0029",
-            "name": "on_event",
-            "summary": "Handle\u0020the\u0020BasicCustomerEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
-            "url": "classes/Tecsafe-OFCP-Events-Listeners-BasicCustomerEventPayloadListener.html#method_on_event"
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003AgetTypeName\u0028\u0029",
+            "name": "getTypeName",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#method_getTypeName"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003AgetEventName\u0028\u0029",
+            "name": "getEventName",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#method_getEventName"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003ACUSTOMER_MERGE",
+            "name": "CUSTOMER_MERGE",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_CUSTOMER_MERGE"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003ACUSTOMER_DELETE",
+            "name": "CUSTOMER_DELETE",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_CUSTOMER_DELETE"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003ACUSTOMER_CREATED",
+            "name": "CUSTOMER_CREATED",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_CUSTOMER_CREATED"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003AEMAIL_GENERIC",
+            "name": "EMAIL_GENERIC",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_EMAIL_GENERIC"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003AEMAIL_BUTTON",
+            "name": "EMAIL_BUTTON",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_EMAIL_BUTTON"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003AEVENTS",
+            "name": "EVENTS",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_EVENTS"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\ButtonEmailEventPayloadListener",
             "name": "ButtonEmailEventPayloadListener",
@@ -20,6 +55,26 @@ Search.appendIndex(
             "name": "on_event",
             "summary": "Handle\u0020the\u0020ButtonEmailEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
             "url": "classes/Tecsafe-OFCP-Events-Listeners-ButtonEmailEventPayloadListener.html#method_on_event"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\CustomerCreatedEventPayloadListener",
+            "name": "CustomerCreatedEventPayloadListener",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-CustomerCreatedEventPayloadListener.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\CustomerCreatedEventPayloadListener\u003A\u003Aon_event\u0028\u0029",
+            "name": "on_event",
+            "summary": "Handle\u0020the\u0020CustomerCreatedEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-CustomerCreatedEventPayloadListener.html#method_on_event"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\CustomerDeleteEventPayloadListener",
+            "name": "CustomerDeleteEventPayloadListener",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-CustomerDeleteEventPayloadListener.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\CustomerDeleteEventPayloadListener\u003A\u003Aon_event\u0028\u0029",
+            "name": "on_event",
+            "summary": "Handle\u0020the\u0020CustomerDeleteEventPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-CustomerDeleteEventPayloadListener.html#method_on_event"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\GenericEmailEventPayloadListener",
             "name": "GenericEmailEventPayloadListener",
@@ -340,6 +395,106 @@ Search.appendIndex(
             "name": "header",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-ButtonEmailEventPayload.html#property_header"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload",
+            "name": "CustomerCreatedEventPayload",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "This\u0020class\u0020represents\u0020the\u0020undefined\u0020model.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003AgetCustomer\u0028\u0029",
+            "name": "getCustomer",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#method_getCustomer"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003AsetCustomer\u0028\u0029",
+            "name": "setCustomer",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#method_setCustomer"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003AgetSalesChannel\u0028\u0029",
+            "name": "getSalesChannel",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#method_getSalesChannel"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003AsetSalesChannel\u0028\u0029",
+            "name": "setSalesChannel",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#method_setSalesChannel"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003A\u0024customer",
+            "name": "customer",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#property_customer"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerCreatedEventPayload\u003A\u003A\u0024salesChannel",
+            "name": "salesChannel",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerCreatedEventPayload.html#property_salesChannel"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload",
+            "name": "CustomerDeleteEventPayload",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "This\u0020class\u0020represents\u0020the\u0020undefined\u0020model.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003AgetCustomer\u0028\u0029",
+            "name": "getCustomer",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#method_getCustomer"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003AsetCustomer\u0028\u0029",
+            "name": "setCustomer",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#method_setCustomer"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003AgetSalesChannel\u0028\u0029",
+            "name": "getSalesChannel",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#method_getSalesChannel"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003AsetSalesChannel\u0028\u0029",
+            "name": "setSalesChannel",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#method_setSalesChannel"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003A\u0024customer",
+            "name": "customer",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#property_customer"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CustomerDeleteEventPayload\u003A\u003A\u0024salesChannel",
+            "name": "salesChannel",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#property_salesChannel"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload",
             "name": "GenericEmailEventPayload",
@@ -793,7 +948,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceError\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Create\u0020a\u0020new\u0020instance\u0020of\u0020the\u0020MqServiceError\u0020class.",
+            "summary": "Create\u0020a\u0020new\u0020instance\u0020of\u0020the\u0020MqServiceError\u0020class",
             "url": "classes/Tecsafe-OFCP-Events-MqServiceError.html#method___construct"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceError\u003A\u003AgetRequeue\u0028\u0029",
@@ -806,20 +961,115 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-MqServiceError.html#property_requeue"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\OfcpEvent",
+            "name": "OfcpEvent",
+            "summary": "Basic\u0020interface\u0020for\u0020OFCP\u002DEvents.",
+            "url": "classes/Tecsafe-OFCP-Events-OfcpEvent.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\OfcpEvent\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-OfcpEvent.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Constants",
+            "name": "Constants",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Constants.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Constants\u003A\u003AMESSENGER_OFCP_EVENTS_BUS_NAME",
+            "name": "MESSENGER_OFCP_EVENTS_BUS_NAME",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Constants.html#constant_MESSENGER_OFCP_EVENTS_BUS_NAME"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Constants\u003A\u003AEVENT_NAME_HEADER",
+            "name": "EVENT_NAME_HEADER",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Constants.html#constant_EVENT_NAME_HEADER"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Constants\u003A\u003ATRANSPORT_CONTENT_TYPE",
+            "name": "TRANSPORT_CONTENT_TYPE",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Constants.html#constant_TRANSPORT_CONTENT_TYPE"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\EventNameMiddleware",
+            "name": "EventNameMiddleware",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-EventNameMiddleware.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\EventNameMiddleware\u003A\u003Ahandle\u0028\u0029",
+            "name": "handle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-EventNameMiddleware.html#method_handle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\EventNameStamp",
+            "name": "EventNameStamp",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-EventNameStamp.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\EventNameStamp\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-EventNameStamp.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\EventNameStamp\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-EventNameStamp.html#method___toString"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\EventNameStamp\u003A\u003A\u0024eventName",
+            "name": "eventName",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-EventNameStamp.html#property_eventName"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Serializer",
+            "name": "Serializer",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Serializer.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Serializer\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Serializer.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Serializer\u003A\u003Adecode\u0028\u0029",
+            "name": "decode",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Serializer.html#method_decode"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Serializer\u003A\u003Aencode\u0028\u0029",
+            "name": "encode",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Serializer.html#method_encode"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Serializer\u003A\u003AhydrateMessage\u0028\u0029",
+            "name": "hydrateMessage",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Serializer.html#method_hydrateMessage"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger\\Serializer\u003A\u003A\u0024logger",
+            "name": "logger",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-Messenger-Serializer.html#property_logger"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\TecsafeOfcpEventsBundle",
+            "name": "TecsafeOfcpEventsBundle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-TecsafeOfcpEventsBundle.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\TecsafeOfcpEventsBundle\u003A\u003AloadExtension\u0028\u0029",
+            "name": "loadExtension",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-TecsafeOfcpEventsBundle.html#method_loadExtension"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\TecsafeOfcpEventsBundle\u003A\u003AprependExtension\u0028\u0029",
+            "name": "prependExtension",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Symfony-Bundle-TecsafeOfcpEventsBundle.html#method_prependExtension"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
-        },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners",
-            "name": "Listeners",
-            "summary": "",
-            "url": "namespaces/tecsafe-ofcp-events-listeners.html"
-        },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models",
-            "name": "Models",
-            "summary": "",
-            "url": "namespaces/tecsafe-ofcp-events-models.html"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events",
             "name": "Events",
@@ -835,5 +1085,30 @@ Search.appendIndex(
             "name": "Tecsafe",
             "summary": "",
             "url": "namespaces/tecsafe.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners",
+            "name": "Listeners",
+            "summary": "",
+            "url": "namespaces/tecsafe-ofcp-events-listeners.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models",
+            "name": "Models",
+            "summary": "",
+            "url": "namespaces/tecsafe-ofcp-events-models.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle\\Messenger",
+            "name": "Messenger",
+            "summary": "",
+            "url": "namespaces/tecsafe-ofcp-events-symfony-bundle-messenger.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony\\Bundle",
+            "name": "Bundle",
+            "summary": "",
+            "url": "namespaces/tecsafe-ofcp-events-symfony-bundle.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Symfony",
+            "name": "Symfony",
+            "summary": "",
+            "url": "namespaces/tecsafe-ofcp-events-symfony.html"
         }            ]
 );
