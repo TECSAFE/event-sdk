@@ -1,5 +1,6 @@
-import { BasicCustomerEventPayload } from "./types/BasicCustomerEvent";
 import { MergeCustomerPayload } from "./types/MergeCustomer";
+import {CustomerDeleteEventPayload} from "./types/CustomerDeleteEvent";
+import {CustomerCreatedEventPayload} from "./types/CustomerCreatedEvent";
 
 /**
  * @category Events
@@ -19,13 +20,13 @@ export const CustomerEvents = {
    */
   CUSTOMER_DELETE: {
     name: 'customer.delete',
-    payload: {} as BasicCustomerEventPayload,
+    payload: {} as CustomerDeleteEventPayload,
   },
   /**
    * Fired after a customer was created by the gateway in zitadel.
    */
   CUSTOMER_CREATED: {
     name: 'customer.created',
-    payload: {} as BasicCustomerEventPayload,
+    payload: {} as CustomerCreatedEventPayload,
   },
 } as const;

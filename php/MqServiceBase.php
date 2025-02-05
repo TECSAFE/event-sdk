@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Tecsafe\OFCP\Events;
 
+use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
-use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Wire\AMQPTable;
-use Exception;
 
 class MqServiceBase
 {
@@ -22,20 +21,20 @@ class MqServiceBase
      * and disconnect when the object is destroyed or the closeConnection method is called.
      * If you just want to send a message, you still have to call the closeConnection method.
      *
-     * @param string $host The AMQP server hostname
-     * @param int $port The AMQP server port
-     * @param string $user The AMQP server username
-     * @param string $password The AMQP server password
+     * @param string $host      The AMQP server hostname
+     * @param int    $port      The AMQP server port
+     * @param string $user      The AMQP server username
+     * @param string $password  The AMQP server password
      * @param string $queueName The queue name for the service, normally the service name
-     * @param string $vhost The AMQP server vhost
-     * @param string $exchange The AMQP exchange name
+     * @param string $vhost     The AMQP server vhost
+     * @param string $exchange  The AMQP exchange name
      */
     public function __construct(
         private readonly string $host = 'localhost',
         private readonly int $port = 5672,
         private readonly string $user = 'guest',
         private readonly string $password = 'guest',
-        private readonly string|null $queueName = null,
+        private readonly ?string $queueName = null,
         private readonly bool $requeueUnhandled = false,
         private readonly string $vhost = '/',
         private readonly string $exchange = 'general',
@@ -55,9 +54,10 @@ class MqServiceBase
                 $this->port,
                 $this->user,
                 $this->password,
-                $this->vhost
+                $this->vhost,
             );
         }
+
         return $this->connection;
     }
 
@@ -97,7 +97,7 @@ class MqServiceBase
                     false,             // passive
                     true,              // durable
                     false,             // exclusive
-                    false              // auto_delete
+                    false,              // auto_delete
                 );
             }
         }
@@ -110,7 +110,8 @@ class MqServiceBase
      *
      * @param string $eventName The event name
      * @param string $payload   The message content
-     * @throws Exception If publishing fails
+     *
+     * @throws \Exception If publishing fails
      */
     public function publish(string $eventName, string $payload): void
     {
@@ -122,11 +123,11 @@ class MqServiceBase
             $message = new AMQPMessage(
                 $payload,
                 [
-                    'delivery_mode'       => AMQPMessage::DELIVERY_MODE_PERSISTENT,
-                    'content_type'        => 'application/json',
-                    'timestamp'           => time(),
+                    'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT,
+                    'content_type' => 'application/json',
+                    'timestamp' => time(),
                     'application_headers' => $headers,
-                ]
+                ],
             );
 
             $channel->basic_publish(
@@ -134,22 +135,23 @@ class MqServiceBase
                 $this->exchange,
                 $eventName,
             );
-        } catch (Exception $e) {
-            throw new Exception("Failed to publish message: " . $e->getMessage(), 0, $e);
+        } catch (\Exception $e) {
+            throw new \Exception('Failed to publish message: '.$e->getMessage(), 0, $e);
         }
     }
 
     /**
      * Register a handler for a specific event type.
      *
-     * @param string $eventName The event name to subscribe to
-     * @param callable $handler Function to process received messages (function(string $payload))
-     * @throws Exception If handler registration fails
+     * @param string   $eventName The event name to subscribe to
+     * @param callable $handler   Function to process received messages (function(string $payload))
+     *
+     * @throws \Exception If handler registration fails
      */
     public function subscribe(string $eventName, callable $handler): void
     {
         if (isset($this->eventHandlers[$eventName])) {
-            throw new Exception("Handler already registered for event: {$eventName}");
+            throw new \Exception("Handler already registered for event: {$eventName}");
         }
 
         $this->eventHandlers[$eventName] = $handler;
@@ -159,15 +161,15 @@ class MqServiceBase
      * Start consuming messages and routing them to registered handlers.
      * This method will block until the channel is closed.
      *
-     * @throws Exception If consumption fails
+     * @throws \Exception If consumption fails
      */
     public function startConsuming(): void
     {
         if ($this->queueName === null) {
-            throw new Exception("Queue name not set");
+            throw new \Exception('Queue name not set');
         }
         if (empty($this->eventHandlers)) {
-            throw new Exception("No event handlers registered");
+            throw new \Exception('No event handlers registered');
         }
 
         try {
@@ -177,7 +179,7 @@ class MqServiceBase
             $channel->basic_qos(
                 0,     // prefetch_size
                 1,     // prefetch_count
-                false  // global
+                false,  // global
             );
 
             $channel->basic_consume(
@@ -189,15 +191,15 @@ class MqServiceBase
                 false,             // nowait
                 function (AMQPMessage $message) {
                     $this->handleMessage($message);
-                }
+                },
             );
 
             // Start consuming messages
             while ($channel->is_consuming()) {
                 $channel->wait();
             }
-        } catch (Exception $e) {
-            throw new Exception("Failed to start consuming messages: " . $e->getMessage(), 0, $e);
+        } catch (\Exception $e) {
+            throw new \Exception('Failed to start consuming messages: '.$e->getMessage(), 0, $e);
         }
     }
 
@@ -221,6 +223,7 @@ class MqServiceBase
             if ($eventName === null || !isset($this->eventHandlers[$eventName])) {
                 // No handler found, reject and requeue the message
                 $message->reject($this->requeueUnhandled);
+
                 return;
             }
 
@@ -235,7 +238,7 @@ class MqServiceBase
             } else {
                 $message->ack();
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             // Reject message and requeue it
             $message->reject(true);
             throw $e;

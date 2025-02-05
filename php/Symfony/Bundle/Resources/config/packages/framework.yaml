@@ -1,0 +1,26 @@
+framework:
+  messenger:
+    buses:
+      ofcp_events:
+        default_middleware:
+          enabled: true
+          allow_no_handlers: true
+          allow_no_senders: true
+        middleware:
+          - ofcp_events.messenger.middleware.event_name
+    transports:
+      ofcp_events:
+        dsn: '%env(MESSENGER_TRANSPORT_OFCP_DSN)%'
+        options:
+          auto_setup: false
+          exchange:
+            name: '%env(MESSENGER_TRANSPORT_OFCP_EXCHANGE_NAME)%'
+            type: '%env(MESSENGER_TRANSPORT_OFCP_EXCHANGE_TYPE)%'
+          queues:
+            '%env(MESSENGER_TRANSPORT_OFCP_QUEUE_NAME)%': ~
+        serializer: ofcp_events.messenger.serializer
+
+    routing:
+      # Route your messages to the transports
+      # 'App\Message\YourMessage': async
+      Tecsafe\OFCP\Events\OfcpEvent: ofcp_events
