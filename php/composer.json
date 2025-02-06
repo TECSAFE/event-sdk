@@ -1,0 +1,27 @@
+{
+  "name": "tecsafe/event-sdk",
+  "description": "The Tecsafe Event SDK",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "ext-json": "*",
+    "ext-amqp": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tecsafe\\OFCP\\Events\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tecsafe\\OFCP\\Events\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "suggest": {
+    "symfony/framework-bundle": "For using provided bundle with symfony"
+  }
+}

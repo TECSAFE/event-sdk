@@ -51,7 +51,7 @@ class AddInterfaceVisitor extends \PhpParser\NodeVisitorAbstract {
     }
 }
 
-$modelsDir = __DIR__ . '/../../php/Models/';
+$modelsDir = __DIR__ . '/../../php/src/Models/';
 
 $finder = \Symfony\Component\Finder\Finder::create();
 

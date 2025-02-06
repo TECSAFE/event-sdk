@@ -50,7 +50,7 @@ class Serializer implements SerializerInterface
 
         if (isset($headers['stamps'])) {
             try {
-                $stamps = \unserialize($headers['stamps']);
+                $stamps = unserialize($headers['stamps']);
                 $stamps[] = new EventNameStamp($eventName);
             } catch (\Throwable $throwable) {
                 $this->logger->error($throwable->getMessage(), [
@@ -85,7 +85,7 @@ class Serializer implements SerializerInterface
         $message = $envelope->getMessage();
 
         if (!$message instanceof OfcpEvent) {
-            throw new \InvalidArgumentException(\sprintf('Unsupported message class. %s expected, but %s given.', OfcpEvent::class, \get_class($message)));
+            throw new \InvalidArgumentException(\sprintf('Unsupported message class. %s expected, but %s given.', OfcpEvent::class, $message::class));
         }
 
         $allStamps = [];
@@ -99,10 +99,10 @@ class Serializer implements SerializerInterface
         }
 
         return [
-            'body' => \json_encode($message, JSON_THROW_ON_ERROR | JSON_PRESERVE_ZERO_FRACTION),
+            'body' => json_encode($message, \JSON_THROW_ON_ERROR | \JSON_PRESERVE_ZERO_FRACTION),
             'headers' => [
                 // store stamps as a header - to be read in decode()
-                'stamps' => \serialize($allStamps),
+                'stamps' => serialize($allStamps),
             ],
         ];
     }
@@ -111,7 +111,7 @@ class Serializer implements SerializerInterface
     {
         $eventType = EventMap::getTypeName($eventName);
 
-        if (!\is_subclass_of($eventType, OfcpEvent::class)) {
+        if (!is_subclass_of($eventType, OfcpEvent::class)) {
             throw new \InvalidArgumentException(\sprintf('Unsupported message class. %s expected, but %s given.', OfcpEvent::class, $eventType));
         }
 

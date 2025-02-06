@@ -1,9 +1,9 @@
 .parcel-cache/
 dist/
 node_modules/
-php/Models/
-php/Listeners/
-php/MqService.php
+php/src/Models/
+php/src/Listeners/
+php/src/MqService.php
 docs/
 vendor/
 src/index.ts

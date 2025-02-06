@@ -31,8 +31,8 @@
     "build:php:generate": "node scripts/generate-php.mjs",
     "build:php:map:events": "docker run --rm -v $(pwd):/code composer:2.2 --working-dir=/code/scripts/php run map:events",
     "build:php:parse": "docker run --rm -v $(pwd):/code composer:2.2 --working-dir=/code/scripts/php run parse ",
-    "build:php:fix": "docker run --rm -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:3-php8.3 fix --config=/code/php/.php-cs-fixer.dist.php --allow-risky=yes --diff /code/php/",
-    "build:php:docs": "cd php && docker run --rm --user $(id -u):$(id -g) -v ${PWD}:/data phpdoc/phpdoc:3",
+    "build:php:fix": "docker run --rm -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:3-php8.3 fix --config=/code/php/.php-cs-fixer.dist.php --allow-risky=yes --diff /code/php/src/",
+    "build:php:docs": "cd php && docker run --rm --user $(id -u):$(id -g) -v ${PWD}:/data phpdoc/phpdoc:3 -d ./src",
     "check": "node scripts/check-names.js"
   },
   "devDependencies": {

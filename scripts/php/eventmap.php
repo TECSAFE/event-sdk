@@ -17,7 +17,7 @@ foreach ($eventMap as $key => $event) {
     ];
 }
 
-$fileInfo = new \SplFileInfo(__DIR__ . '/../../php/EventMap.php');
+$fileInfo = new \SplFileInfo(__DIR__ . '/../../php/src/EventMap.php');
 $parser = (new \PhpParser\ParserFactory())->createForVersion(\PhpParser\PhpVersion::fromComponents(8, 3));
 
 try {
@@ -38,12 +38,12 @@ $traverser->addVisitor(new class($events) extends \PhpParser\NodeVisitorAbstract
             $factory = new \PhpParser\BuilderFactory();
             $newConstNodes = [];
 
-            // Neue Konstanten als Nodes erstellen
+            // Create new constants as nodes
             foreach ($this->events as $event) {
                 $newConstNodes[] = $factory->classConst($this->createEventConstantName($event['name']), $event)->getNode();
             }
 
-            // Konstanten vor der ersten vorhandenen Konstante einfügen
+            // Insert constants before the first existing constant
             foreach ($node->stmts as $index => $stmt) {
                 if ($stmt instanceof \PhpParser\Node\Stmt\ClassConst) {
                     array_splice($node->stmts, $index, 0, $newConstNodes);
@@ -51,14 +51,14 @@ $traverser->addVisitor(new class($events) extends \PhpParser\NodeVisitorAbstract
                 }
             }
 
-            // Falls keine vorhandene Konstante existiert, einfach hinzufügen
+            // If no existing constant exists, simply add
             array_push($node->stmts, ...$newConstNodes);
         }
 
         if ($node instanceof \PhpParser\Node\Const_ && $node->name->toString() === 'EVENTS') {
             $builder = new \PhpParser\BuilderFactory();
             $eventsArray = [];
-            //$arrayNode = $builder->val($this->events);
+
             /* @var $newConstNode \PhpParser\Builder\ClassConst */
             foreach ($this->events as $event) {
                 $eventsArray[] = $builder->classConstFetch('self', $this->createEventConstantName($event['name']));

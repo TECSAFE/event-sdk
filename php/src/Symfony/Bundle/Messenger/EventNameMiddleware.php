@@ -23,7 +23,7 @@ class EventNameMiddleware implements MiddlewareInterface
             'content_type' => Constants::TRANSPORT_CONTENT_TYPE,
             'headers' => [
                 Constants::EVENT_NAME_HEADER => $eventNameStamp->eventName,
-            ]
+            ],
         ]));
 
         return $stack->next()->handle($envelope, $stack);
