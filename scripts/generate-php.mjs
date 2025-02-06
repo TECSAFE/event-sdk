@@ -6,7 +6,7 @@ if (!existsSync('./dist/schema.json')) {
   process.exit(1);
 }
 
-const OUTPUT_DIR = './php';
+const OUTPUT_DIR = './php/src';
 const MODELS_OUTPUT_DIR = OUTPUT_DIR + '/Models';
 const LISTENER_OUTPUT_DIR = OUTPUT_DIR + '/Listeners';
 

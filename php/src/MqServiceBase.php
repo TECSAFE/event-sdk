@@ -4,16 +4,12 @@ declare(strict_types=1);
 
 namespace Tecsafe\OFCP\Events;
 
-use PhpAmqpLib\Channel\AMQPChannel;
-use PhpAmqpLib\Connection\AMQPStreamConnection;
-use PhpAmqpLib\Message\AMQPMessage;
-use PhpAmqpLib\Wire\AMQPTable;
-
 class MqServiceBase
 {
-    private ?AMQPStreamConnection $connection = null;
-    private ?AMQPChannel $channel = null;
+    private ?\AMQPConnection $connection = null;
+    private ?\AMQPChannel $channel = null;
     private array $eventHandlers = [];
+    private ?\AmqpExchange $exchange = null;
 
     /**
      * Create a new instance of the MqService class.
@@ -27,7 +23,7 @@ class MqServiceBase
      * @param string $password  The AMQP server password
      * @param string $queueName The queue name for the service, normally the service name
      * @param string $vhost     The AMQP server vhost
-     * @param string $exchange  The AMQP exchange name
+     * @param string $exchangeName  The AMQP exchange name
      */
     public function __construct(
         private readonly string $host = 'localhost',
@@ -37,28 +33,27 @@ class MqServiceBase
         private readonly ?string $queueName = null,
         private readonly bool $requeueUnhandled = false,
         private readonly string $vhost = '/',
-        private readonly string $exchange = 'general',
+        private readonly string $exchangeName = 'general',
     ) {
     }
 
     /**
      * Get the AMQP connection instance. If it does not exist, it will be created.
      *
-     * @return AMQPStreamConnection The connection instance
+     * @return \AMQPConnection The connection instance
      */
-    public function getConnection(): AMQPStreamConnection
+    public function openConnection(): void
     {
         if ($this->connection === null) {
-            $this->connection = new AMQPStreamConnection(
-                $this->host,
-                $this->port,
-                $this->user,
-                $this->password,
-                $this->vhost,
-            );
+            $this->connection = new \AMQPConnection([
+                'host' => $this->host,
+                'port' => $this->port,
+                'login' => $this->user,
+                'password' => $this->password,
+                'vhost' => $this->vhost,
+            ]);
+            $this->connection->connect();
         }
-
-        return $this->connection;
     }
 
     /**
@@ -68,14 +63,15 @@ class MqServiceBase
     public function closeConnection(): void
     {
         // Close the channel first
-        if ($this->channel !== null && $this->channel->is_open()) {
+        if ($this->channel !== null && $this->channel->isConnected()) {
             $this->channel->close();
         }
+
         $this->channel = null;
 
         // Then close the connection
         if ($this->connection !== null) {
-            $this->connection->close();
+            $this->connection->disconnect();
             $this->connection = null;
         }
     }
@@ -83,22 +79,24 @@ class MqServiceBase
     /**
      * Get the AMQP channel. If it does not exist, it will be created along with the queue.
      *
-     * @return AMQPChannel The channel instance
+     * @return \AMQPChannel The channel instance
      */
-    private function getChannel(): AMQPChannel
+    private function getChannel(): \AMQPChannel
     {
         if ($this->channel === null) {
-            $this->channel = $this->getConnection()->channel();
+            $this->channel = new \AMQPChannel($this->connection);
 
             // Declare queue with durable flag for persistence
             if ($this->queueName !== null) {
-                $this->channel->queue_declare(
-                    $this->queueName,  // queue
-                    false,             // passive
-                    true,              // durable
-                    false,             // exclusive
-                    false,              // auto_delete
-                );
+                $queue = new \AMQPQueue($this->channel);
+                $queue->setFlags(\AMQP_DURABLE);
+                $queue->declareQueue();
+            }
+
+            if ($this->exchangeName !== null && $this->exchange === null) {
+                $this->exchange = new \AMQPExchange($this->channel);
+                $this->exchange->setName($this->exchangeName);
+                $this->exchange->setFlags(\AMQP_DURABLE);
             }
         }
 
@@ -115,26 +113,23 @@ class MqServiceBase
      */
     public function publish(string $eventName, string $payload): void
     {
+        $this->openConnection();
+
         try {
             $channel = $this->getChannel();
 
-            $headers = new AMQPTable(['event_name' => $eventName]);
+            $headers = [
+                'event_name' => $eventName,
+            ];
 
-            $message = new AMQPMessage(
-                $payload,
-                [
-                    'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT,
-                    'content_type' => 'application/json',
-                    'timestamp' => time(),
-                    'application_headers' => $headers,
-                ],
-            );
-
-            $channel->basic_publish(
-                $message,
-                $this->exchange,
-                $eventName,
-            );
+            $attributes = [
+                'delivery_mode' => \AMQP_DELIVERY_MODE_PERSISTENT,
+                'content_type' => 'application/json',
+                'timestamp' => time(),
+                'application_headers' => $headers,
+                'headers' => $headers,
+            ];
+            $this->exchange->publish($payload, $eventName, \AMQP_NOPARAM, $attributes);
         } catch (\Exception $e) {
             throw new \Exception('Failed to publish message: '.$e->getMessage(), 0, $e);
         }
@@ -175,29 +170,15 @@ class MqServiceBase
         try {
             $channel = $this->getChannel();
 
-            // Enable prefetch for better load distribution
-            $channel->basic_qos(
-                0,     // prefetch_size
-                1,     // prefetch_count
-                false,  // global
-            );
+            $channel->qos(0, 1, false);
 
-            $channel->basic_consume(
-                $this->queueName,  // queue
-                '',                // consumer_tag
-                false,             // no_local
-                false,             // no_ack
-                false,             // exclusive
-                false,             // nowait
-                function (AMQPMessage $message) {
-                    $this->handleMessage($message);
-                },
-            );
+            $queue = new \AMQPQueue($channel);
+            $queue->setFlags(AMQP_DURABLE);
+            $queue->declareQueue();
+            $queue->consume(function (\AMQPEnvelope $message, \AMQPQueue $queue): void {
+                $this->handleMessage($message, $queue);
+            });
 
-            // Start consuming messages
-            while ($channel->is_consuming()) {
-                $channel->wait();
-            }
         } catch (\Exception $e) {
             throw new \Exception('Failed to start consuming messages: '.$e->getMessage(), 0, $e);
         }
@@ -206,13 +187,13 @@ class MqServiceBase
     /**
      * Handle an incoming message by routing it to the appropriate event handler.
      *
-     * @param AMQPMessage $message The incoming AMQP message
+     * @param \AMQPEnvelope $message The incoming AMQP message
      */
-    private function handleMessage(AMQPMessage $message): void
+    private function handleMessage(\AMQPEnvelope $message, \AMQPQueue $queue): void
     {
         try {
             // Get event name from message headers
-            $props = $message->get_properties();
+            $props = $message->getHeaders();
             $headers = [];
             if (isset($props['application_headers'])) {
                 $headers = $props['application_headers']->getNativeData();
@@ -222,7 +203,7 @@ class MqServiceBase
             // Check if we have a handler for this event
             if ($eventName === null || !isset($this->eventHandlers[$eventName])) {
                 // No handler found, reject and requeue the message
-                $message->reject($this->requeueUnhandled);
+                $queue->reject($message->getDeliveryTag(), $this->requeueUnhandled ? \AMQP_REQUEUE : \AMQP_NOPARAM);
 
                 return;
             }
@@ -232,15 +213,15 @@ class MqServiceBase
             $res = $handler($message->getBody());
 
             if ($res instanceof MqServiceError) {
-                $message->reject($res->getRequeue());
+                $queue->reject($message->getDeliveryTag(), $res->getRequeue() ? \AMQP_REQUEUE : \AMQP_NOPARAM);
             } elseif ($res !== true) {
-                $message->reject(true);
+                $queue->reject($message->getDeliveryTag(), \AMQP_REQUEUE);
             } else {
-                $message->ack();
+                $queue->ack($message->getDeliveryTag());
             }
         } catch (\Exception $e) {
+            $queue->reject($message->getDeliveryTag(), \AMQP_REQUEUE);
             // Reject message and requeue it
-            $message->reject(true);
             throw $e;
         }
     }
