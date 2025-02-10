@@ -15,16 +15,14 @@ class EventNameMiddleware implements MiddlewareInterface
     {
         $eventNameStamp = $envelope->last(EventNameStamp::class);
 
-        if (!$eventNameStamp instanceof EventNameStamp) {
-            throw new \InvalidArgumentException("No EventNameStamp found");
+        if ($eventNameStamp instanceof EventNameStamp) {
+            $envelope = $envelope->with(AmqpStamp::createWithAttributes([
+                'content_type' => Constants::TRANSPORT_CONTENT_TYPE,
+                'headers' => [
+                    Constants::EVENT_NAME_HEADER => $eventNameStamp->eventName,
+                ],
+            ]));
         }
-
-        $envelope = $envelope->with(AmqpStamp::createWithAttributes([
-            'content_type' => Constants::TRANSPORT_CONTENT_TYPE,
-            'headers' => [
-                Constants::EVENT_NAME_HEADER => $eventNameStamp->eventName,
-            ],
-        ]));
 
         return $stack->next()->handle($envelope, $stack);
     }
