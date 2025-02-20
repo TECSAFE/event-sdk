@@ -1,3 +1,4 @@
+import { AuthentikEvents } from "./AuthentikEvents";
 import { CustomerEvents } from "./CustomerEvents";
 import { EmailEvents } from "./EmailEvents";
 
@@ -6,5 +7,6 @@ import { EmailEvents } from "./EmailEvents";
  */
 export const Events = {
   ...CustomerEvents,
-  ...EmailEvents
+  ...EmailEvents,
+  ...AuthentikEvents
 } as const;
