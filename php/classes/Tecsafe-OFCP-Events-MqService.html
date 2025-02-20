@@ -120,9 +120,9 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -158,13 +158,13 @@
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_channel">$channel</a>
     <span>
-                        &nbsp;: <abbr title="\PhpAmqpLib\Channel\AMQPChannel">AMQPChannel</abbr>|null            </span>
+                        &nbsp;: <abbr title="\AMQPChannel">AMQPChannel</abbr>|null            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_connection">$connection</a>
     <span>
-                        &nbsp;: <abbr title="\PhpAmqpLib\Connection\AMQPStreamConnection">AMQPStreamConnection</abbr>|null            </span>
+                        &nbsp;: <abbr title="\AMQPConnection">AMQPConnection</abbr>|null            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
@@ -175,6 +175,12 @@
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchange">$exchange</a>
+    <span>
+                        &nbsp;: <abbr title="\AmqpExchange">AmqpExchange</abbr>|null            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a class="" href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchangeName">$exchangeName</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
@@ -252,9 +258,9 @@
 and therefore remove all subscriptions.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_getConnection">getConnection()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_openConnection">openConnection()</a>
     <span>
-                                &nbsp;: <abbr title="\PhpAmqpLib\Connection\AMQPStreamConnection">AMQPStreamConnection</abbr>    </span>
+                                &nbsp;: <abbr title="\AMQPConnection">AMQPConnection</abbr>    </span>
 </dt>
 <dd>Get the AMQP connection instance. If it does not exist, it will be created.</dd>
 
@@ -264,6 +270,13 @@ and therefore remove all subscriptions.</dd>
                                 &nbsp;: void    </span>
 </dt>
 <dd>Publish a message to the service&#039;s queue, including the event name in the headers.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user">send_authentik_add_user()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Send the authentik.add_user event.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_created">send_customer_created()</a>
@@ -315,6 +328,13 @@ and therefore remove all subscriptions.</dd>
 <dd>Register a handler for a specific event type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_authentik_add_user">subscribe_authentik_add_user()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Subscribe to the authentik.add_user event.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_created">subscribe_customer_created()</a>
     <span>
                                 &nbsp;: void    </span>
@@ -352,7 +372,7 @@ and therefore remove all subscriptions.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_getChannel">getChannel()</a>
     <span>
-                                &nbsp;: <abbr title="\PhpAmqpLib\Channel\AMQPChannel">AMQPChannel</abbr>    </span>
+                                &nbsp;: <abbr title="\AMQPChannel">AMQPChannel</abbr>    </span>
 </dt>
 <dd>Get the AMQP channel. If it does not exist, it will be created along with the queue.</dd>
 
@@ -391,9 +411,9 @@ and therefore remove all subscriptions.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
@@ -401,7 +421,7 @@ and therefore remove all subscriptions.</dd>
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><abbr title="\PhpAmqpLib\Channel\AMQPChannel">AMQPChannel</abbr>|null</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\AMQPChannel">AMQPChannel</abbr>|null</span>
     <span class="phpdocumentor-signature__name">$channel</span>
      = <span class="phpdocumentor-signature__default-value">null</span></code>
 
@@ -427,9 +447,9 @@ and therefore remove all subscriptions.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">9</span>
 
     </aside>
 
@@ -437,7 +457,7 @@ and therefore remove all subscriptions.</dd>
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><abbr title="\PhpAmqpLib\Connection\AMQPStreamConnection">AMQPStreamConnection</abbr>|null</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\AMQPConnection">AMQPConnection</abbr>|null</span>
     <span class="phpdocumentor-signature__name">$connection</span>
      = <span class="phpdocumentor-signature__default-value">null</span></code>
 
@@ -463,9 +483,9 @@ and therefore remove all subscriptions.</dd>
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 
     </aside>
 
@@ -489,19 +509,55 @@ and therefore remove all subscriptions.</dd>
             phpdocumentor-element
             -property
             -private
-                                                -read-only        "
+                                                        "
 >
     <h4 class="phpdocumentor-element__name" id="property_exchange">
         $exchange
         <a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchange" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">12</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\AmqpExchange">AmqpExchange</abbr>|null</span>
+    <span class="phpdocumentor-signature__name">$exchange</span>
+     = <span class="phpdocumentor-signature__default-value">null</span></code>
+
+    
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                -read-only        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_exchangeName">
+        $exchangeName
+        <a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchangeName" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
@@ -510,7 +566,7 @@ and therefore remove all subscriptions.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$exchange</span>
+    <span class="phpdocumentor-signature__name">$exchangeName</span>
      = <span class="phpdocumentor-signature__default-value">&#039;general&#039;</span></code>
 
     
@@ -535,9 +591,9 @@ and therefore remove all subscriptions.</dd>
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
@@ -571,9 +627,9 @@ and therefore remove all subscriptions.</dd>
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
@@ -607,9 +663,9 @@ and therefore remove all subscriptions.</dd>
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -643,9 +699,9 @@ and therefore remove all subscriptions.</dd>
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
@@ -679,9 +735,9 @@ and therefore remove all subscriptions.</dd>
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
@@ -715,9 +771,9 @@ and therefore remove all subscriptions.</dd>
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -751,9 +807,9 @@ and therefore remove all subscriptions.</dd>
                         <small class="phpdocumentor-element__modifier">read-only</small>        </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
@@ -792,9 +848,9 @@ and therefore remove all subscriptions.</dd>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
@@ -802,7 +858,7 @@ and therefore remove all subscriptions.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$host</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;localhost&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$port</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">5672</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;guest&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;guest&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$queueName</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$requeueUnhandled</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vhost</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;/&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$exchange</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;general&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$host</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;localhost&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$port</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">5672</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;guest&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;guest&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$queueName</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$requeueUnhandled</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$vhost</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;/&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$exchangeName</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;general&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -876,7 +932,7 @@ If you just want to send a message, you still have to call the closeConnection m
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$exchange</span>
+                <span class="phpdocumentor-signature__argument__name">$exchangeName</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;general&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -904,9 +960,9 @@ If you just want to send a message, you still have to call the closeConnection m
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">251</span>
+    <span class="phpdocumentor-element-found-in__line">232</span>
 
     </aside>
 
@@ -939,9 +995,9 @@ If you just want to send a message, you still have to call the closeConnection m
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">68</span>
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
     </aside>
 
@@ -969,15 +1025,15 @@ and therefore remove all subscriptions.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getConnection">
-        getConnection()
-        <a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_getConnection" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_openConnection">
+        openConnection()
+        <a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_openConnection" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">45</span>
 
     </aside>
 
@@ -985,7 +1041,7 @@ and therefore remove all subscriptions.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getConnection</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\PhpAmqpLib\Connection\AMQPStreamConnection">AMQPStreamConnection</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">openConnection</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\AMQPConnection">AMQPConnection</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -998,7 +1054,7 @@ and therefore remove all subscriptions.</p>
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\PhpAmqpLib\Connection\AMQPStreamConnection">AMQPStreamConnection</abbr></span>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\AMQPConnection">AMQPConnection</abbr></span>
                     &mdash;
                 <section class="phpdocumentor-description"><p>The connection instance</p>
 </section>
@@ -1018,9 +1074,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">116</span>
+    <span class="phpdocumentor-element-found-in__line">114</span>
 
     </aside>
 
@@ -1085,15 +1141,79 @@ and therefore remove all subscriptions.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_send_authentik_add_user">
+        send_authentik_add_user()
+        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">179</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Send the authentik.add_user event.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">send_authentik_add_user</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html"><abbr title="\Tecsafe\OFCP\Events\Models\AuthentikAddUserPayload">AuthentikAddUserPayload</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$payload</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$payload</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html"><abbr title="\Tecsafe\OFCP\Events\Models\AuthentikAddUserPayload">AuthentikAddUserPayload</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The payload to send.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If the message could not be sent.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_send_customer_created">
         send_customer_created()
         <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_created" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">89</span>
 
     </aside>
 
@@ -1155,9 +1275,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
@@ -1219,9 +1339,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
@@ -1283,9 +1403,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">147</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 
     </aside>
 
@@ -1347,9 +1467,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">119</span>
 
     </aside>
 
@@ -1411,9 +1531,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">166</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 
     </aside>
 
@@ -1465,9 +1585,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">146</span>
 
     </aside>
 
@@ -1532,15 +1652,62 @@ and therefore remove all subscriptions.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_subscribe_authentik_add_user">
+        subscribe_authentik_add_user()
+        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_authentik_add_user" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">188</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Subscribe to the authentik.add_user event.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">subscribe_authentik_add_user</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|<a href="classes/Tecsafe-OFCP-Events-Listeners-AuthentikAddUserPayloadListener.html"><abbr title="\Tecsafe\OFCP\Events\Listeners\AuthentikAddUserPayloadListener">AuthentikAddUserPayloadListener</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$callback</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$callback</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable|<a href="classes/Tecsafe-OFCP-Events-Listeners-AuthentikAddUserPayloadListener.html"><abbr title="\Tecsafe\OFCP\Events\Listeners\AuthentikAddUserPayloadListener">AuthentikAddUserPayloadListener</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The callback or listener instance to call when the event is received.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_subscribe_customer_created">
         subscribe_customer_created()
         <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_created" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">96</span>
+    <span class="phpdocumentor-element-found-in__line">98</span>
 
     </aside>
 
@@ -1585,9 +1752,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">68</span>
 
     </aside>
 
@@ -1632,9 +1799,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
@@ -1679,9 +1846,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">156</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 
     </aside>
 
@@ -1726,9 +1893,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqService.php"><a href="files/mqservice.html">MqService.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqService.php"><a href="files/src-mqservice.html"><abbr title="src/MqService.php">MqService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">126</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 
     </aside>
 
@@ -1773,9 +1940,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">88</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
@@ -1783,7 +1950,7 @@ and therefore remove all subscriptions.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">getChannel</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\PhpAmqpLib\Channel\AMQPChannel">AMQPChannel</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">getChannel</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\AMQPChannel">AMQPChannel</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1796,7 +1963,7 @@ and therefore remove all subscriptions.</p>
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\PhpAmqpLib\Channel\AMQPChannel">AMQPChannel</abbr></span>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\AMQPChannel">AMQPChannel</abbr></span>
                     &mdash;
                 <section class="phpdocumentor-description"><p>The channel instance</p>
 </section>
@@ -1816,9 +1983,9 @@ and therefore remove all subscriptions.</p>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="MqServiceBase.php"><a href="files/mqservicebase.html">MqServiceBase.php</a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/MqServiceBase.php"><a href="files/src-mqservicebase.html"><abbr title="src/MqServiceBase.php">MqServiceBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">211</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 
     </aside>
 
@@ -1826,7 +1993,7 @@ and therefore remove all subscriptions.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">handleMessage</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\PhpAmqpLib\Message\AMQPMessage">AMQPMessage</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">handleMessage</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\AMQPEnvelope">AMQPEnvelope</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\AMQPQueue">AMQPQueue</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$queue</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1836,12 +2003,19 @@ and therefore remove all subscriptions.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$message</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\PhpAmqpLib\Message\AMQPMessage">AMQPMessage</abbr></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\AMQPEnvelope">AMQPEnvelope</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The incoming AMQP message</p>
 </section>
 
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$queue</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\AMQPQueue">AMQPQueue</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
             </dd>
             </dl>
 
@@ -1857,7 +2031,7 @@ and therefore remove all subscriptions.</p>
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/MqService.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/MqService.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -1968,6 +2142,7 @@ and therefore remove all subscriptions.</p>
                                                     <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_connection">$connection</a></li>
                                                     <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_eventHandlers">$eventHandlers</a></li>
                                                     <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchange">$exchange</a></li>
+                                                    <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchangeName">$exchangeName</a></li>
                                                     <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_host">$host</a></li>
                                                     <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_password">$password</a></li>
                                                     <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_port">$port</a></li>
@@ -1984,8 +2159,9 @@ and therefore remove all subscriptions.</p>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method___construct">__construct()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method___destruct">__destruct()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_closeConnection">closeConnection()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_getConnection">getConnection()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_openConnection">openConnection()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_publish">publish()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user">send_authentik_add_user()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_created">send_customer_created()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_delete">send_customer_delete()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_merge">send_customer_merge()</a></li>
@@ -1993,6 +2169,7 @@ and therefore remove all subscriptions.</p>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_email_generic">send_email_generic()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_startConsuming">startConsuming()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_subscribe">subscribe()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_authentik_add_user">subscribe_authentik_add_user()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_created">subscribe_customer_created()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_delete">subscribe_customer_delete()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_merge">subscribe_customer_merge()</a></li>

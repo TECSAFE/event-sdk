@@ -41,10 +41,25 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_EMAIL_BUTTON"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003AAUTHENTIK_ADD_USER",
+            "name": "AUTHENTIK_ADD_USER",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_AUTHENTIK_ADD_USER"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\EventMap\u003A\u003AEVENTS",
             "name": "EVENTS",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-EventMap.html#constant_EVENTS"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\AuthentikAddUserPayloadListener",
+            "name": "AuthentikAddUserPayloadListener",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-AuthentikAddUserPayloadListener.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\AuthentikAddUserPayloadListener\u003A\u003Aon_event\u0028\u0029",
+            "name": "on_event",
+            "summary": "Handle\u0020the\u0020AuthentikAddUserPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
+            "url": "classes/Tecsafe-OFCP-Events-Listeners-AuthentikAddUserPayloadListener.html#method_on_event"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Listeners\\ButtonEmailEventPayloadListener",
             "name": "ButtonEmailEventPayloadListener",
@@ -95,6 +110,56 @@ Search.appendIndex(
             "name": "on_event",
             "summary": "Handle\u0020the\u0020MergeCustomerPayload\u0020event.\u0020If\u0020returning\u0020false,\u0020the\u0020event\u0020will\u0020be\u0020requeued.",
             "url": "classes/Tecsafe-OFCP-Events-Listeners-MergeCustomerPayloadListener.html#method_on_event"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload",
+            "name": "AuthentikAddUserPayload",
+            "summary": "Payload\u0020for\u0020add\u0020an\u0020user\u0020to\u0020Authentik",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Payload\u0020for\u0020add\u0020an\u0020user\u0020to\u0020Authentik",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003AgetPassword\u0028\u0029",
+            "name": "getPassword",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getPassword"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003AsetPassword\u0028\u0029",
+            "name": "setPassword",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setPassword"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getUser"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setUser"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003A\u0024password",
+            "name": "password",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_password"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\AuthentikAddUserPayload\u003A\u003A\u0024user",
+            "name": "user",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_user"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\BasicCustomerEventPayload",
             "name": "BasicCustomerEventPayload",
@@ -781,6 +846,101 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-MergeCustomerPayload.html#property_oldSalesChannelId"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User",
+            "name": "User",
+            "summary": "user\u0020data\u0020attributes\u0020username,\u0020name,\u0020email,\u0020are\u0020Required\u0020and\u0020are\u0020self\u0020explaining\u0020type\u003A\u0020is\u0020Required\u0020and\u0020Define\u0020the\u0020type\u0020of\u0020the\u0020user\u0020\u005Binternal\u2503external\u2503service_account\u2503internal_service_account\u005D\u0020groups\u0020\u003A\u0020Optional,\u0020array\u0020of\u0020uuids\u0020of\u0020the\u0020groups\u0020the\u0020user\u0020is\u0020in",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "user\u0020data\u0020attributes\u0020username,\u0020name,\u0020email,\u0020are\u0020Required\u0020and\u0020are\u0020self\u0020explaining\u0020type\u003A\u0020is\u0020Required\u0020and\u0020Define\u0020the\u0020type\u0020of\u0020the\u0020user\u0020\u005Binternal\u2503external\u2503service_account\u2503internal_service_account\u005D\u0020groups\u0020\u003A\u0020Optional,\u0020array\u0020of\u0020uuids\u0020of\u0020the\u0020groups\u0020the\u0020user\u0020is\u0020in",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AgetEmail\u0028\u0029",
+            "name": "getEmail",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_getEmail"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AsetEmail\u0028\u0029",
+            "name": "setEmail",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_setEmail"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AgetGroups\u0028\u0029",
+            "name": "getGroups",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_getGroups"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AsetGroups\u0028\u0029",
+            "name": "setGroups",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_setGroups"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_getName"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_setName"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AgetType\u0028\u0029",
+            "name": "getType",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_getType"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AsetType\u0028\u0029",
+            "name": "setType",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_setType"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AgetUsername\u0028\u0029",
+            "name": "getUsername",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_getUsername"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AsetUsername\u0028\u0029",
+            "name": "setUsername",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_setUsername"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003A\u0024email",
+            "name": "email",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#property_email"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#property_name"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003A\u0024type",
+            "name": "type",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#property_type"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003A\u0024username",
+            "name": "username",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#property_username"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\User\u003A\u003A\u0024groups",
+            "name": "groups",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-User.html#property_groups"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService",
             "name": "MqService",
             "summary": "",
@@ -836,6 +996,16 @@ Search.appendIndex(
             "summary": "Subscribe\u0020to\u0020the\u0020email.button\u0020event.",
             "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_email_button"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService\u003A\u003Asend_authentik_add_user\u0028\u0029",
+            "name": "send_authentik_add_user",
+            "summary": "Send\u0020the\u0020authentik.add_user\u0020event.",
+            "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqService\u003A\u003Asubscribe_authentik_add_user\u0028\u0029",
+            "name": "subscribe_authentik_add_user",
+            "summary": "Subscribe\u0020to\u0020the\u0020authentik.add_user\u0020event.",
+            "url": "classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_authentik_add_user"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase",
             "name": "MqServiceBase",
             "summary": "",
@@ -846,10 +1016,10 @@ Search.appendIndex(
             "summary": "Create\u0020a\u0020new\u0020instance\u0020of\u0020the\u0020MqService\u0020class.",
             "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#method___construct"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase\u003A\u003AgetConnection\u0028\u0029",
-            "name": "getConnection",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase\u003A\u003AopenConnection\u0028\u0029",
+            "name": "openConnection",
             "summary": "Get\u0020the\u0020AMQP\u0020connection\u0020instance.\u0020If\u0020it\u0020does\u0020not\u0020exist,\u0020it\u0020will\u0020be\u0020created.",
-            "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_getConnection"
+            "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_openConnection"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase\u003A\u003AcloseConnection\u0028\u0029",
             "name": "closeConnection",
@@ -901,6 +1071,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_eventHandlers"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase\u003A\u003A\u0024exchange",
+            "name": "exchange",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchange"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase\u003A\u003A\u0024host",
             "name": "host",
             "summary": "",
@@ -936,10 +1111,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_vhost"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase\u003A\u003A\u0024exchange",
-            "name": "exchange",
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceBase\u003A\u003A\u0024exchangeName",
+            "name": "exchangeName",
             "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchange"
+            "url": "classes/Tecsafe-OFCP-Events-MqServiceBase.html#property_exchangeName"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\MqServiceError",
             "name": "MqServiceError",
