@@ -1,0 +1,364 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AuthentikAddUserPayload": {
+      "additionalProperties": false,
+      "description": "Payload for add an user to Authentik",
+      "properties": {
+        "password": {
+          "type": "string"
+        },
+        "user": {
+          "additionalProperties": false,
+          "description": "user data attributes username, name, email, are Required and are self explaining type: is Required and Define the type of the user [internal┃external┃service_account┃internal_service_account] groups : Optional, array of uuids of the groups the user is in",
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "groups": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "username": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "username",
+            "name",
+            "email",
+            "type"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "user",
+        "password"
+      ],
+      "type": "object"
+    },
+    "BasicCustomerEventPayload": {
+      "additionalProperties": false,
+      "description": "Payload for deleting customers",
+      "properties": {
+        "customer": {
+          "description": "The customer ID",
+          "type": "string"
+        },
+        "salesChannel": {
+          "description": "The sales channel ID",
+          "type": "string"
+        }
+      },
+      "required": [
+        "customer",
+        "salesChannel"
+      ],
+      "type": "object"
+    },
+    "ButtonEmailEventPayload": {
+      "additionalProperties": false,
+      "description": "Payload for sending emails with one to two buttons",
+      "properties": {
+        "body": {
+          "additionalProperties": false,
+          "description": "Email body attributs text: Email text that will be added in the template {{ text }} without html tags Links are parsed to anchor tags title: Email title that will be added in the template {{ title }} not the subject data: holds the data for the buttons",
+          "properties": {
+            "data": {
+              "additionalProperties": false,
+              "properties": {
+                "primatyButton": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "url"
+                  ],
+                  "type": "object"
+                },
+                "secondaryButton": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "url"
+                  ],
+                  "type": "object"
+                }
+              },
+              "required": [
+                "primatyButton"
+              ],
+              "type": "object"
+            },
+            "text": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "title",
+            "data"
+          ],
+          "type": "object"
+        },
+        "header": {
+          "additionalProperties": false,
+          "description": "Email header attreibutes to, from, cc, bcc, subject, are Required and are self explaining replyTo: Optional the recipient of the reply returnPath : Optional return path address of the email",
+          "properties": {
+            "bcc": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "cc": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "from": {
+              "type": "string"
+            },
+            "replyTo": {
+              "type": "string"
+            },
+            "returnPath": {
+              "type": "string"
+            },
+            "subject": {
+              "type": "string"
+            },
+            "to": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "to",
+            "from",
+            "subject"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "header",
+        "body"
+      ],
+      "type": "object"
+    },
+    "CustomerCreatedEventPayload": {
+      "additionalProperties": false,
+      "properties": {
+        "customer": {
+          "description": "The customer ID",
+          "type": "string"
+        },
+        "salesChannel": {
+          "description": "The sales channel ID",
+          "type": "string"
+        }
+      },
+      "required": [
+        "customer",
+        "salesChannel"
+      ],
+      "type": "object"
+    },
+    "CustomerDeleteEventPayload": {
+      "additionalProperties": false,
+      "properties": {
+        "customer": {
+          "description": "The customer ID",
+          "type": "string"
+        },
+        "salesChannel": {
+          "description": "The sales channel ID",
+          "type": "string"
+        }
+      },
+      "required": [
+        "customer",
+        "salesChannel"
+      ],
+      "type": "object"
+    },
+    "GenericEmailEventPayload": {
+      "additionalProperties": false,
+      "description": "Payload for sending generic emails",
+      "properties": {
+        "body": {
+          "additionalProperties": false,
+          "description": "Email body attributs text: Email text that will be added in the template {{ text }} without html tags Links are parsed to anchor tags title: Email title that will be added in the template {{ title }} not the subject",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "title"
+          ],
+          "type": "object"
+        },
+        "header": {
+          "additionalProperties": false,
+          "description": "Email header attreibutes to, from, cc, bcc, subject, are Required and are self explaining replyTo: Optional the recipient of the reply returnPath : Optional return path address of the email",
+          "properties": {
+            "bcc": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "cc": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "from": {
+              "type": "string"
+            },
+            "replyTo": {
+              "type": "string"
+            },
+            "returnPath": {
+              "type": "string"
+            },
+            "subject": {
+              "type": "string"
+            },
+            "to": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "to",
+            "from",
+            "subject"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "header",
+        "body"
+      ],
+      "type": "object"
+    },
+    "MergeCustomerPayload": {
+      "additionalProperties": false,
+      "description": "Payload for merging customers",
+      "properties": {
+        "newCustomerId": {
+          "description": "The new customer ID",
+          "type": "string"
+        },
+        "newExternalCustomerId": {
+          "description": "The new customer ID",
+          "type": "string"
+        },
+        "newSalesChannelId": {
+          "description": "The new sales channel ID",
+          "type": "string"
+        },
+        "oldCustomerId": {
+          "description": "The old customer ID",
+          "type": "string"
+        },
+        "oldExternalCustomerId": {
+          "description": "The old external customer ID",
+          "type": "string"
+        },
+        "oldSalesChannelId": {
+          "description": "The old sales channel ID",
+          "type": "string"
+        }
+      },
+      "required": [
+        "oldExternalCustomerId",
+        "newExternalCustomerId",
+        "oldSalesChannelId",
+        "newSalesChannelId",
+        "oldCustomerId",
+        "newCustomerId"
+      ],
+      "type": "object"
+    },
+    "EventsMap": {
+      "type": "object",
+      "properties": {
+        "customer.merge": {
+          "type": "string",
+          "const": "MergeCustomerPayload"
+        },
+        "customer.delete": {
+          "type": "string",
+          "const": "CustomerDeleteEventPayload"
+        },
+        "customer.created": {
+          "type": "string",
+          "const": "CustomerCreatedEventPayload"
+        },
+        "email.generic": {
+          "type": "string",
+          "const": "GenericEmailEventPayload"
+        },
+        "email.button": {
+          "type": "string",
+          "const": "ButtonEmailEventPayload"
+        },
+        "authentik.add_user": {
+          "type": "string",
+          "const": "AuthentikAddUserPayload"
+        }
+      },
+      "required": [
+        "customer.merge",
+        "customer.delete",
+        "customer.created",
+        "email.generic",
+        "email.button",
+        "authentik.add_user"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
