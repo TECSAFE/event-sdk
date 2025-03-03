@@ -1,7 +1,7 @@
 /**
- * Payload for add an user to Authentik
+ * Payload for add an user to the Cockpit
  */
-export interface AuthentikAddUserPayload {
+export interface CockpitAddRegistrationPayload {
     /**
      * user data attributes
      * username, name, email, are Required and are self explaining
@@ -15,5 +15,7 @@ export interface AuthentikAddUserPayload {
       email: string
       type: string
     }
+    role: string;
+    expiration_date: Date | null;
     password: string
 }

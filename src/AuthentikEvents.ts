@@ -1,4 +1,4 @@
-import {AuthentikAddUserPayload} from "./types/AuthentikAddUserEvent";
+import {CockpitAddRegistrationPayload} from "./types/CockpitAddRegistrationEvent";
 
 /**
  * @category Events
@@ -7,8 +7,8 @@ export const AuthentikEvents = {
     /**
      * Fired when a user needs to be added to authentik
      */
-    AUTHENTIK_ADD_USER: {
-        name: 'authentik.add_user',
-        payload: {} as AuthentikAddUserPayload,
+    COCKPIT_ADD_REGISTRATION: {
+        name: 'cockpit.addRegistration',
+        payload: {} as CockpitAddRegistrationPayload,
     },
 } as const;
