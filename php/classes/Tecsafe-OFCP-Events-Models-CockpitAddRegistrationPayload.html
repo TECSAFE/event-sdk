@@ -99,7 +99,7 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    AuthentikAddUserPayload
+    CockpitAddRegistrationPayload
 
     
             <div class="phpdocumentor-element__package">
@@ -123,13 +123,13 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Payload for add an user to Authentik</p>
+            <p class="phpdocumentor-summary">Payload for add an user to the Cockpit</p>
 
 
 
@@ -141,7 +141,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -149,7 +149,7 @@
 
     <h4 id="toc-interfaces">
         Interfaces
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <dl class="phpdocumentor-table-of-contents">
@@ -162,18 +162,30 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_password">$password</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_expirationDate">$expirationDate</a>
+    <span>
+                        &nbsp;: mixed|null            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_password">$password</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_user">$user</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_role">$role</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_user">$user</a>
     <span>
                         &nbsp;: <a href="classes/Tecsafe-OFCP-Events-Models-User.html"><abbr title="\Tecsafe\OFCP\Events\Models\User">User</abbr></a>            </span>
 </dt>
@@ -182,50 +194,74 @@
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method___construct">__construct()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: self    </span>
 </dt>
-<dd>Payload for add an user to Authentik</dd>
+<dd>Payload for add an user to the Cockpit</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_from_json">from_json()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_from_json">from_json()</a>
     <span>
                                 &nbsp;: self    </span>
 </dt>
 <dd>Parse JSON data into an instance of this class.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getPassword">getPassword()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getExpirationDate">getExpirationDate()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getPassword">getPassword()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getUser">getUser()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getRole">getRole()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getUser">getUser()</a>
     <span>
                                 &nbsp;: <a href="classes/Tecsafe-OFCP-Events-Models-User.html"><abbr title="\Tecsafe\OFCP\Events\Models\User">User</abbr></a>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_jsonSerialize">jsonSerialize()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_jsonSerialize">jsonSerialize()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setPassword">setPassword()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setExpirationDate">setExpirationDate()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setUser">setUser()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setPassword">setPassword()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setRole">setRole()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setUser">setUser()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
@@ -240,7 +276,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -250,17 +286,53 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_password">
-        $password
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_password" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_expirationDate">
+        $expirationDate
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_expirationDate" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed|null</span>
+    <span class="phpdocumentor-signature__name">$expirationDate</span>
+    </code>
+
+    
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_password">
+        $password
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_password" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -286,17 +358,53 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_user">
-        $user
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_user" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_role">
+        $role
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_role" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$role</span>
+    </code>
+
+    
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_user">
+        $user
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_user" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -320,7 +428,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -331,21 +439,21 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Payload for add an user to Authentik</p>
+        <p class="phpdocumentor-summary">Payload for add an user to the Cockpit</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-User.html"><abbr title="\Tecsafe\OFCP\Events\Models\User">User</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$expirationDate</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$role</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-User.html"><abbr title="\Tecsafe\OFCP\Events\Models\User">User</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -354,7 +462,21 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$expirationDate</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$password</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$role</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -389,13 +511,13 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_from_json">
         from_json()
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_from_json" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_from_json" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -438,15 +560,49 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getPassword">
-        getPassword()
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getPassword" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getExpirationDate">
+        getExpirationDate()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getExpirationDate" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getExpirationDate</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getPassword">
+        getPassword()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getPassword" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
@@ -476,15 +632,53 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getUser">
-        getUser()
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getUser" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getRole">
+        getRole()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getRole" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getRole</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getUser">
+        getUser()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getUser" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
@@ -516,13 +710,13 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_jsonSerialize">
         jsonSerialize()
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_jsonSerialize" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_jsonSerialize" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">67</span>
 
     </aside>
 
@@ -552,15 +746,59 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setPassword">
-        setPassword()
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setPassword" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setExpirationDate">
+        setExpirationDate()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setExpirationDate" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setExpirationDate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$expirationDate</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$expirationDate</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setPassword">
+        setPassword()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setPassword" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
@@ -596,15 +834,59 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setUser">
-        setUser()
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setUser" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setRole">
+        setRole()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setRole" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/AuthentikAddUserPayload.php"><a href="files/src-models-authentikadduserpayload.html"><abbr title="src/Models/AuthentikAddUserPayload.php">AuthentikAddUserPayload.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setRole</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$role</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$role</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setUser">
+        setUser()
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setUser" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Models/CockpitAddRegistrationPayload.php"><a href="files/src-models-cockpitaddregistrationpayload.html"><abbr title="src/Models/CockpitAddRegistrationPayload.php">CockpitAddRegistrationPayload.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
     </aside>
 
@@ -640,7 +922,7 @@
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Models/AuthentikAddUserPayload.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Models/CockpitAddRegistrationPayload.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -739,29 +1021,35 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_password">$password</a></li>
-                                                    <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#property_user">$user</a></li>
+                                                    <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_expirationDate">$expirationDate</a></li>
+                                                    <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_password">$password</a></li>
+                                                    <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_role">$role</a></li>
+                                                    <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_user">$user</a></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method___construct">__construct()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_from_json">from_json()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getPassword">getPassword()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_getUser">getUser()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_jsonSerialize">jsonSerialize()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setPassword">setPassword()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#method_setUser">setUser()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method___construct">__construct()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_from_json">from_json()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getExpirationDate">getExpirationDate()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getPassword">getPassword()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getRole">getRole()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getUser">getUser()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_jsonSerialize">jsonSerialize()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setExpirationDate">setExpirationDate()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setPassword">setPassword()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setRole">setRole()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setUser">setUser()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -781,7 +1069,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

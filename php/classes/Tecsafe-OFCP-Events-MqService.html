@@ -272,11 +272,11 @@ and therefore remove all subscriptions.</dd>
 <dd>Publish a message to the service&#039;s queue, including the event name in the headers.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user">send_authentik_add_user()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_cockpit_addRegistration">send_cockpit_addRegistration()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Send the authentik.add_user event.</dd>
+<dd>Send the cockpit.addRegistration event.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_created">send_customer_created()</a>
@@ -328,11 +328,11 @@ and therefore remove all subscriptions.</dd>
 <dd>Register a handler for a specific event type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_authentik_add_user">subscribe_authentik_add_user()</a>
+    <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_cockpit_addRegistration">subscribe_cockpit_addRegistration()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Subscribe to the authentik.add_user event.</dd>
+<dd>Subscribe to the cockpit.addRegistration event.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_created">subscribe_customer_created()</a>
@@ -1141,9 +1141,9 @@ and therefore remove all subscriptions.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_send_authentik_add_user">
-        send_authentik_add_user()
-        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_send_cockpit_addRegistration">
+        send_cockpit_addRegistration()
+        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_cockpit_addRegistration" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
@@ -1153,11 +1153,11 @@ and therefore remove all subscriptions.</p>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Send the authentik.add_user event.</p>
+        <p class="phpdocumentor-summary">Send the cockpit.addRegistration event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">send_authentik_add_user</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html"><abbr title="\Tecsafe\OFCP\Events\Models\AuthentikAddUserPayload">AuthentikAddUserPayload</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$payload</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">send_cockpit_addRegistration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html"><abbr title="\Tecsafe\OFCP\Events\Models\CockpitAddRegistrationPayload">CockpitAddRegistrationPayload</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$payload</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1167,7 +1167,7 @@ and therefore remove all subscriptions.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$payload</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-AuthentikAddUserPayload.html"><abbr title="\Tecsafe\OFCP\Events\Models\AuthentikAddUserPayload">AuthentikAddUserPayload</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html"><abbr title="\Tecsafe\OFCP\Events\Models\CockpitAddRegistrationPayload">CockpitAddRegistrationPayload</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The payload to send.</p>
@@ -1179,7 +1179,7 @@ and therefore remove all subscriptions.</p>
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_cockpit_addRegistration#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -1652,9 +1652,9 @@ and therefore remove all subscriptions.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_subscribe_authentik_add_user">
-        subscribe_authentik_add_user()
-        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_authentik_add_user" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_subscribe_cockpit_addRegistration">
+        subscribe_cockpit_addRegistration()
+        <a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_cockpit_addRegistration" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
@@ -1664,11 +1664,11 @@ and therefore remove all subscriptions.</p>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Subscribe to the authentik.add_user event.</p>
+        <p class="phpdocumentor-summary">Subscribe to the cockpit.addRegistration event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">subscribe_authentik_add_user</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|<a href="classes/Tecsafe-OFCP-Events-Listeners-AuthentikAddUserPayloadListener.html"><abbr title="\Tecsafe\OFCP\Events\Listeners\AuthentikAddUserPayloadListener">AuthentikAddUserPayloadListener</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$callback</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">subscribe_cockpit_addRegistration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|<a href="classes/Tecsafe-OFCP-Events-Listeners-CockpitAddRegistrationPayloadListener.html"><abbr title="\Tecsafe\OFCP\Events\Listeners\CockpitAddRegistrationPayloadListener">CockpitAddRegistrationPayloadListener</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$callback</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1678,7 +1678,7 @@ and therefore remove all subscriptions.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$callback</span>
-                : <span class="phpdocumentor-signature__argument__return-type">callable|<a href="classes/Tecsafe-OFCP-Events-Listeners-AuthentikAddUserPayloadListener.html"><abbr title="\Tecsafe\OFCP\Events\Listeners\AuthentikAddUserPayloadListener">AuthentikAddUserPayloadListener</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable|<a href="classes/Tecsafe-OFCP-Events-Listeners-CockpitAddRegistrationPayloadListener.html"><abbr title="\Tecsafe\OFCP\Events\Listeners\CockpitAddRegistrationPayloadListener">CockpitAddRegistrationPayloadListener</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The callback or listener instance to call when the event is received.</p>
@@ -2161,7 +2161,7 @@ and therefore remove all subscriptions.</p>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_closeConnection">closeConnection()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_openConnection">openConnection()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_publish">publish()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_authentik_add_user">send_authentik_add_user()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_cockpit_addRegistration">send_cockpit_addRegistration()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_created">send_customer_created()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_delete">send_customer_delete()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_customer_merge">send_customer_merge()</a></li>
@@ -2169,7 +2169,7 @@ and therefore remove all subscriptions.</p>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_send_email_generic">send_email_generic()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_startConsuming">startConsuming()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqServiceBase.html#method_subscribe">subscribe()</a></li>
-                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_authentik_add_user">subscribe_authentik_add_user()</a></li>
+                                            <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_cockpit_addRegistration">subscribe_cockpit_addRegistration()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_created">subscribe_customer_created()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_delete">subscribe_customer_delete()</a></li>
                                             <li class=""><a href="classes/Tecsafe-OFCP-Events-MqService.html#method_subscribe_customer_merge">subscribe_customer_merge()</a></li>
