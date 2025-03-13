@@ -38,9 +38,8 @@ export interface EmailHeader {
    * It’s an SMTP address separate from the sending address. This is a good practice for email delivery,
    * as it gives bounced emails a place to land – other than in an inbox – making it easier to avoid
    * sending notifications to bounced addresses. However, it’s important for authentication to ensure
-   * that the return path domain is the same as the sending domain.
-   * 
-   * Brands use a return path that stores all bounced emails, which helps them improve deliverability,
+   * that the return path domain is the same as the sending domain. Brands use a return path that 
+   * stores all bounced emails, which helps them improve deliverability,
    * making them more credible to inbox service providers (ISPs) like Gmail and Yahoo Mail. Return path
    * also helps track email bounces and maintain email list hygiene.
    */
