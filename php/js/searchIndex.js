@@ -163,18 +163,28 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body",
             "name": "Body",
-            "summary": "Email\u0020body\u0020attributs\u0020text\u003A\u0020Email\u0020text\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020text\u0020\u007D\u007D\u0020without\u0020html\u0020tags\u0020Links\u0020are\u0020parsed\u0020to\u0020anchor\u0020tags\u0020title\u003A\u0020Email\u0020title\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020title\u0020\u007D\u007D\u0020not\u0020the\u0020subject",
+            "summary": "Email\u0020body\u0020attributs\u0020text\u003A\u0020Email\u0020text\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020text\u0020\u007D\u007D\u0020without\u0020html\u0020tags\u0020Links\u0020are\u0020parsed\u0020to\u0020anchor\u0020tags\u0020title\u003A\u0020Email\u0020title\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020title\u0020\u007D\u007D\u0020not\u0020the\u0020subject\u0020data\u003A\u0020holds\u0020the\u0020data\u0020for\u0020the\u0020buttons",
             "url": "classes/Tecsafe-OFCP-Events-Models-Body.html"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Email\u0020body\u0020attributs\u0020text\u003A\u0020Email\u0020text\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020text\u0020\u007D\u007D\u0020without\u0020html\u0020tags\u0020Links\u0020are\u0020parsed\u0020to\u0020anchor\u0020tags\u0020title\u003A\u0020Email\u0020title\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020title\u0020\u007D\u007D\u0020not\u0020the\u0020subject",
+            "summary": "Email\u0020body\u0020attributs\u0020text\u003A\u0020Email\u0020text\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020text\u0020\u007D\u007D\u0020without\u0020html\u0020tags\u0020Links\u0020are\u0020parsed\u0020to\u0020anchor\u0020tags\u0020title\u003A\u0020Email\u0020title\u0020that\u0020will\u0020be\u0020added\u0020in\u0020the\u0020template\u0020\u007B\u007B\u0020title\u0020\u007D\u007D\u0020not\u0020the\u0020subject\u0020data\u003A\u0020holds\u0020the\u0020data\u0020for\u0020the\u0020buttons",
             "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method___construct"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003Afrom_json\u0028\u0029",
             "name": "from_json",
             "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
             "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AgetData\u0028\u0029",
+            "name": "getData",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_getData"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AsetData\u0028\u0029",
+            "name": "setData",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_setData"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003AgetText\u0028\u0029",
             "name": "getText",
@@ -200,6 +210,11 @@ Search.appendIndex(
             "name": "jsonSerialize",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003A\u0024data",
+            "name": "data",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-Body.html#property_data"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Body\u003A\u003A\u0024text",
             "name": "text",
@@ -591,6 +606,116 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-CustomerDeleteEventPayload.html#property_salesChannel"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader",
+            "name": "EmailHeader",
+            "summary": "The\u0020header\u0020of\u0020an\u0020email.\u0020Reused\u0020in\u0020all\u0020email\u0020events.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "The\u0020header\u0020of\u0020an\u0020email.\u0020Reused\u0020in\u0020all\u0020email\u0020events.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method___construct"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003Afrom_json\u0028\u0029",
+            "name": "from_json",
+            "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_from_json"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AgetBcc\u0028\u0029",
+            "name": "getBcc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_getBcc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AsetBcc\u0028\u0029",
+            "name": "setBcc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_setBcc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AgetCc\u0028\u0029",
+            "name": "getCc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_getCc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AsetCc\u0028\u0029",
+            "name": "setCc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_setCc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AgetReplyTo\u0028\u0029",
+            "name": "getReplyTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_getReplyTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AsetReplyTo\u0028\u0029",
+            "name": "setReplyTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_setReplyTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AgetReturnPath\u0028\u0029",
+            "name": "getReturnPath",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_getReturnPath"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AsetReturnPath\u0028\u0029",
+            "name": "setReturnPath",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_setReturnPath"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AgetSubject\u0028\u0029",
+            "name": "getSubject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_getSubject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AsetSubject\u0028\u0029",
+            "name": "setSubject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_setSubject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AgetTo\u0028\u0029",
+            "name": "getTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_getTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AsetTo\u0028\u0029",
+            "name": "setTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_setTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003A\u0024subject",
+            "name": "subject",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#property_subject"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003A\u0024bcc",
+            "name": "bcc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#property_bcc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003A\u0024cc",
+            "name": "cc",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#property_cc"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003A\u0024replyTo",
+            "name": "replyTo",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#property_replyTo"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003A\u0024returnPath",
+            "name": "returnPath",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#property_returnPath"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\EmailHeader\u003A\u003A\u0024to",
+            "name": "to",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-EmailHeader.html#property_to"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload",
             "name": "GenericEmailEventPayload",
             "summary": "Payload\u0020for\u0020sending\u0020generic\u0020emails",
@@ -606,16 +731,6 @@ Search.appendIndex(
             "summary": "Parse\u0020JSON\u0020data\u0020into\u0020an\u0020instance\u0020of\u0020this\u0020class.",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_from_json"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetBody\u0028\u0029",
-            "name": "getBody",
-            "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getBody"
-        },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetBody\u0028\u0029",
-            "name": "setBody",
-            "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setBody"
-        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetHeader\u0028\u0029",
             "name": "getHeader",
             "summary": "",
@@ -626,20 +741,45 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setHeader"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetText\u0028\u0029",
+            "name": "getText",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getText"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetText\u0028\u0029",
+            "name": "setText",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setText"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AgetTitle\u0028\u0029",
+            "name": "getTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_getTitle"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AsetTitle\u0028\u0029",
+            "name": "setTitle",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_setTitle"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003AjsonSerialize\u0028\u0029",
             "name": "jsonSerialize",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#method_jsonSerialize"
         },                {
-            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024body",
-            "name": "body",
-            "summary": "",
-            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_body"
-        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024header",
             "name": "header",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_header"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024text",
+            "name": "text",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_text"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\GenericEmailEventPayload\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-GenericEmailEventPayload.html#property_title"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\Header",
             "name": "Header",
