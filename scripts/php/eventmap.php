@@ -17,11 +17,14 @@ foreach ($eventMap as $key => $event) {
     ];
 }
 
-$fileInfo = new \SplFileInfo(__DIR__ . '/../../php/src/EventMap.php');
+$template = new \SplFileInfo(__DIR__ . '/../../php/templates/EventMap.php');
+$targetFilePATH = __DIR__ . '/../../php/src/EventMap.php';
+$targetFile = new \SplFileInfo($targetFilePATH);
+
 $parser = (new \PhpParser\ParserFactory())->createForVersion(\PhpParser\PhpVersion::fromComponents(8, 3));
 
 try {
-    $ast = $parser->parse(\file_get_contents($fileInfo->getRealPath()));
+    $ast = $parser->parse(\file_get_contents($template->getRealPath()));
 
 } catch (Error $error) {
     echo "Parse error: {$error->getMessage()}\n";
@@ -83,6 +86,6 @@ $prettyPrinter = new \PhpParser\PrettyPrinter\Standard();
 
 $newCode = $prettyPrinter->prettyPrintFile($modifiedStmts);
 
-$fileObj = $fileInfo->openFile('w+');
+$targetFileObj = $targetFile->openFile('w');
 
-$fileObj->fwrite($newCode);
+$targetFileObj->fwrite($newCode);
