@@ -4,6 +4,7 @@ node_modules/
 php/src/Models/
 php/src/Listeners/
 php/src/MqService.php
+php/src/EventMap.php
 docs/
 vendor/
 src/index.ts

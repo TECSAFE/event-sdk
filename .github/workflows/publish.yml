@@ -76,6 +76,7 @@ jobs:
           rm -rf php/.phpdoc
           mv php/* event-sdk-php/
           mv php/.* event-sdk-php/
+          rm -Rf event-sdk-php/templates/
           cp LICENSE event-sdk-php/
           echo "WARNING: This repository is automatically generated from the event-sdk repository." > event-sdk-php/README.md
           echo "Do not edit files in this repository directly." >> event-sdk-php/README.md
