@@ -16,6 +16,7 @@ export interface CockpitAddRegistrationPayload {
       type: string
     }
     role: string;
+    organisationId: string;
     expiration_date: Date | null;
     password: string
 }
