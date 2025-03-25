@@ -281,6 +281,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setExpirationDate"
         },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CockpitAddRegistrationPayload\u003A\u003AgetOrganisationId\u0028\u0029",
+            "name": "getOrganisationId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_getOrganisationId"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CockpitAddRegistrationPayload\u003A\u003AsetOrganisationId\u0028\u0029",
+            "name": "setOrganisationId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#method_setOrganisationId"
+        },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CockpitAddRegistrationPayload\u003A\u003AgetPassword\u0028\u0029",
             "name": "getPassword",
             "summary": "",
@@ -320,6 +330,11 @@ Search.appendIndex(
             "name": "expirationDate",
             "summary": "",
             "url": "classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_expirationDate"
+        },                {
+            "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CockpitAddRegistrationPayload\u003A\u003A\u0024organisationId",
+            "name": "organisationId",
+            "summary": "",
+            "url": "classes/Tecsafe-OFCP-Events-Models-CockpitAddRegistrationPayload.html#property_organisationId"
         },                {
             "fqsen": "\\Tecsafe\\OFCP\\Events\\Models\\CockpitAddRegistrationPayload\u003A\u003A\u0024password",
             "name": "password",
